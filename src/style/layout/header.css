@@ -1,0 +1,41 @@
+@import url("../base/reset.css");
+@import url("../base/global.css");
+@import url("../base/variables.css");
+
+.header {
+    background-color: var(--bg-color);
+    padding: 20px 9% 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-divider {
+    width: 3px;
+    height: 60px;
+    background-color: var(--main-color);
+}
+
+.app-name {
+    color: var(--main-color);
+    font-size: 28px;
+    font-weight: 600;
+}

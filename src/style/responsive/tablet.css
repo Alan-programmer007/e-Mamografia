@@ -1,0 +1,35 @@
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .header {
+    padding: 20px 6%;
+  }
+
+  .nav-bar {
+    padding: 25px 6%;
+  }
+
+  .form-section {
+    padding: 30px 6%;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .form-row {
+    gap: 30px;
+  }
+
+  .form-group-large {
+    min-width: 300px;
+  }
+
+  .anamnese-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .bnt {
+    padding: 16px 80px;
+  }
+}

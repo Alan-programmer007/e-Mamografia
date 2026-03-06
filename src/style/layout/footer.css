@@ -1,0 +1,11 @@
+@import url("../base/reset.css");
+@import url("../base/global.css");
+@import url("../base/variables.css");
+
+.footer {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 12px;
+}

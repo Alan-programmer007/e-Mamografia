@@ -1,0 +1,182 @@
+@import url("./variables.css");
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Definição do <main> */
+.main-content {
+    flex: 1;
+    margin: 0 auto;
+    width: 100%;
+}
+/* Definição da <section> */
+.form-section {
+    background-color: transparent;
+    padding: 30px 9% 30px;
+}
+/* Definição do simbolo de obrigatorio */
+.obrigatorio{
+    font-size: 17px;
+    color: red;
+}
+/* Definição das linhas e como devem se comportar, defini a linha */ 
+.form-row {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+/* Definição dos grupos de formulario ou inputs, defini inputs e label */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+/* Estiliza os label */
+.form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--secong-text-color);
+}
+/* Estiliza os inputs */
+.form-group input {
+    padding: 10px 15px;
+    font-size: 17px;
+    border: 2px solid var(--secong-text-color);
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-group input:focus {
+    outline: none;
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 3px rgba(13, 115, 119, 0.1);
+}
+.form-group input:hover {
+    border-color: var(--main-color);
+}
+.form-group input[readonly] {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+}
+/* Define o geupo especial do SISCAN */
+.form-group-protocol {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 15px;
+}
+/* Define os grupos que ocupam uma linha toda */
+.form-group-full {
+    flex: 1;
+    width: 100%;
+}
+/* Define os grandes grupos */
+.form-group-large {
+  flex: 2;
+  min-width: 400px;
+}
+/* Define os grupos que tem três inputs por linha */
+.form-group-third {
+    flex: 1;
+    min-width: 200px;
+}
+/* Define dois inputs por linha */
+.form-group-half {
+    flex: 1;
+    min-width: 250px;
+}
+/* Define um input maior que o outro em uma linha onde tem dois inputs */
+.form-group-two-thirds {
+    flex: 2;
+    min-width: 350px;
+}
+/* Define o tamanho dos UF */
+.form-group-uf {
+    flex: 0 0 80px;
+    min-width: 80px;
+}
+/* Define o CEP e TELEFONE */
+.form-group-cep {
+    flex: 0 0 220px;
+}
+.form-group-ddd {
+    flex: 0 0 100px;
+    min-width: 100px;
+    margin: auto auto auto 50px;
+}
+.form-group-telefone {
+    flex: 1;
+    min-width: 280px;
+}
+.input-with-separator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.input-with-separator input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid var(--secong-text-color);
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f5f5f5;
+}
+.input-with-separator .input-small {
+  flex: 0 0 70px;
+}
+.input-with-separator .separator {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--secong-text-color);
+}
+/* Checkbox */ 
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.checkbox-row-raca {
+    gap: 30px;
+}
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.checkbox-item input[type="checkbox"] {
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--secong-text-color);
+    border-radius: 4px;
+    cursor: pointer;
+    appearance: none;
+    background-color: #f5f5f5;
+}
+.checkbox-item input[type="checkbox"]:checked {
+    background-color: var(--main-color);
+    border-color: var(--secong-text-color);
+}
+.checkbox-item label {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--secong-text-color);
+    cursor: pointer;
+}
+.checkbox-row-raca .checkbox-item input[type="text"] {
+    width: 150px;
+    padding: 8px 12px;
+    border: 2px solid var(--secong-text-color);
+    border-radius: 5px;
+    font-size: 15px;
+    background-color: #f5f5f5;
+}
+
+
+

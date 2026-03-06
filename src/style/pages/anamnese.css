@@ -1,0 +1,165 @@
+@import url("../base/reset.css");
+@import url("../base/global.css");
+@import url("../base/variables.css");
+
+/* Anamnese Section */
+.anamnese-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.anamnese-col {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.question-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.question-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--secong-text-color);
+  line-height: 1.4;
+}
+
+.checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 10px;
+}
+
+.checkbox-item-with-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-item-with-input input[type="checkbox"] {
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--secong-text-color);
+  border-radius: 4px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #f5f5f5;
+  flex-shrink: 0;
+}
+
+.checkbox-item-with-input input[type="checkbox"]:checked {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.checkbox-item-with-input label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--secong-text-color);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.input-year-inline {
+  width: 100px;
+  padding: 8px 12px;
+  border: 2px solid var(--secong-text-color);
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f5f5f5;
+}
+
+.inline-field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+  margin: 5px 0;
+}
+
+.inline-field label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--secong-text-color);
+}
+
+.input-year {
+  width: 180px;
+  padding: 10px 12px;
+  border: 2px solid var(--secong-text-color);
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f5f5f5;
+}
+
+.risk-note {
+  background-color: transparent;
+  padding: 10px 0;
+  font-size: 14px;
+  color: var(--secong-text-color);
+  line-height: 1.5;
+}
+
+.risk-note p {
+  margin-bottom: 5px;
+}
+
+.risk-note ul {
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+.risk-note li {
+  margin-bottom: 3px;
+}
+
+.risk-subtext {
+  margin-left: 0;
+}
+
+/* Table */
+.surgery-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.surgery-table th {
+  font-weight: 600;
+  color: var(--secong-text-color);
+  padding: 8px 5px;
+  text-align: center;
+}
+
+.surgery-table th:first-child,
+.surgery-table th:last-child {
+  width: 80px;
+}
+
+.surgery-table td {
+  padding: 5px;
+  vertical-align: middle;
+}
+
+.surgery-table .surgery-name {
+  text-align: center;
+  font-size: 14px;
+  color: var(--secong-text-color);
+  padding: 5px 10px;
+}
+
+.input-surgery {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid var(--secong-text-color);
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: #f5f5f5;
+  text-align: center;
+}

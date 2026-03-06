@@ -1,0 +1,14 @@
+@import url("./base/reset.css");
+@import url("./base/global.css");
+@import url("./base/variables.css");
+
+@import url("./layout/header.css");
+@import url("./layout/footer.css");
+@import url("./layout/titles.css");
+
+@import url("./pages/anamnese.css");
+@import url("./pages/salve.css");
+@import url("./pages/initial.css");
+
+@import url("./responsive/celular.css");
+@import url("./responsive/tablet.css");

@@ -1,0 +1,22 @@
+:root {
+    --bg-color: #F0F8FF;
+    --text-color: #F0F8FF;
+    --secong-text-color: #1a1a1a;
+    --main-color: #016E8C;
+}
+/* Esconder a img para usar na impressao como canvas */
+#background-anamnese {
+    display: none;
+}
+
+.invalido {
+    border: 2px red solid;
+}
+
+.desativado{
+    background-color: rgb(216, 227, 235);
+}
+
+.desativado:hover{
+    cursor: not-allowed;
+}

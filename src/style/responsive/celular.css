@@ -1,0 +1,99 @@
+@media (max-width: 768px) {
+
+  /* Header */
+  .header {
+    padding: 15px 5%;
+  }
+
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .app-name {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  /* Nav bar */
+  .nav-bar {
+    padding: 20px 5%;
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-left,
+  .nav-right {
+    font-size: 13px;
+  }
+
+  /* Sections */
+  .form-section {
+    padding: 25px 5%;
+  }
+
+  /* Títulos */
+  .section-title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  /* Linhas viram coluna */
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Grupos ocupam 100% */
+  .form-group,
+  .form-group-full,
+  .form-group-half,
+  .form-group-third,
+  .form-group-large,
+  .form-group-two-thirds,
+  .form-group-telefone {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .form-group-uf,
+  .form-group-ddd,
+  .form-group-cep {
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+  }
+
+  /* Inputs */
+  .form-group input {
+    font-size: 16px;
+  }
+
+  /* Checkbox */
+  .checkbox-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* Anamnese */
+  .anamnese-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Botão */
+  .bnt {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  /* Footer */
+  .footer {
+    font-size: 11px;
+    padding: 12px;
+  }
+}

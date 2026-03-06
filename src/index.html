@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="shortcut icon" href="./assets/image/logo-cedim-icons.ico" type="image/x-icon">
+    <title>Mamografia</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+        <div class="logos">
+            <img src="./assets/image/logo-cedim.png" alt="logo do CEDIM" class="logo">
+            <div class="logo-divider"></div>
+            <img src="./assets/image/logo-pet-saude.png" alt="logo pet-saúde" class="logo">
+        </div>
+            <h1 class="app-name">Name APP</h1>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <nav class="nav-bar">
+            <span class="nav-left">MINISTÉRIO DA SAÚDE</span>
+            <span class="nav-right">REQUISIÇÃO DE MAMOGRAFIA</span>
+        </nav>
+
+        <section class="form-section">
+            <h2 class="section-title">Programa Nacional de Controle ao Câncer de mama</h2>
+            
+            <div class="form-row">
+                <div class="form-group form-group-uf">
+                <label for="uf">UF</label>
+                <input type="text" value="AL" id="uf" name="uf" maxlength="2">
+                </div>
+                
+                <div class="form-group form-group-medium">
+                <label for="cnes">CNES da Unidade de Saúde</label>
+                <input type="text" id="cnes" name="cnes" maxlength="7">
+                </div>
+                
+                <div class="form-group form-group-protocol">
+                <div class="label-with-note">
+                    <label for="protocolo">N° do protocolo</label>
+                    <span class="note">(n° gerado automaticamente<br>pelo SISCAN)</span>
+                </div>
+                <input type="text" id="protocolo" name="protocolo" maxlength="10">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-full">
+                <label for="unidade">Unidade de Saúde</label>
+                <input type="text" id="unidade" name="unidade" maxlength="35">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-third">
+                <label for="codigo-municipio">Código do Município</label>
+                <input type="number" id="codigo-municipio" name="codigo-municipio" maxlength="7">
+                </div>
+                
+                <div class="form-group form-group-third">
+                <label for="municipio">Município</label>
+                <input type="text" id="municipio" name="municipio" maxlength="15">
+                </div>
+                
+                <div class="form-group form-group-third">
+                <label for="pontuario">Pontuário</label>
+                <input type="text" id="pontuario" name="pontuario" maxlength="10">
+                </div>
+            </div>
+        </section>
+
+        <nav class="nav-bar pessoais">
+            <span class="nav-left">INFORMAÇÔES PESSOAIS</span>
+        </nav>
+
+        <section class="form-section">
+                
+            <div class="form-row">
+                <div class="form-group form-group-large">
+                    <label for="cartao-sus">Cartão SUS <span class="obrigatorio">*</span></label>
+                    <input type="text" id="cartao-sus" name="cartao-sus" maxlength="15" required>
+                </div>
+                
+                <div class="form-group form-group-sexo">
+                <label>Sexo</label>
+                <div class="checkbox-row">
+                    <div class="checkbox-item">
+                    <input type="checkbox" id="masculino" name="sexo" value="masculino">
+                    <label for="masculino">Masculino</label>
+                    </div>
+                    <div class="checkbox-item">
+                    <input type="checkbox" id="feminino" name="sexo" value="feminino">
+                    <label for="feminino">Feminino</label>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-full">
+                    <label for="nome">Nome completo do(a) paciente <span class="obrigatorio">*</span></label>
+                    <input type="text" id="nome" name="nome" maxlength="35" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-half">
+                    <label for="apelido">Apelido do(a) paciente</label>
+                    <input type="text" id="apelido" name="apelido" maxlength="19">
+                </div>
+                    
+                <div class="form-group form-group-half">
+                    <label for="nacionalidade">Nacionalidade</label>
+                    <input type="text" id="nacionalidade" name="nacionalidade" maxlength="16">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-third">
+                    <label for="CPF">CPF</label>
+                    <input type="number" id="CPF" name="CPF" maxlength="11">
+                </div>
+                    
+                <div class="form-group form-group-third">
+                    <label for="nascimento">Data de Nascimento <span class="obrigatorio">*</span></label>
+                    <input type="date" id="nascimento" name="nascimento" required>
+                </div>
+                    
+                <div class="form-group form-group-third">
+                    <label for="idade">Idade <span class="obrigatorio">*</span></label>
+                    <input type="number" id="idade" name="idade" min="0" max="99" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-full">
+                    <label for="mae">Nome completo da mãe <span class="obrigatorio">*</span></label>
+                    <input type="text" id="mae" name="mae" maxlength="35" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-full">
+                    <label>Cor/Raça</label>
+                    <div class="checkbox-row checkbox-row-raca">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="branca" name="cor-raca" value="branca">
+                            <label for="branca">Branca</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="preta" name="cor-raca" value="preta">
+                            <label for="preta">Preta</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="parda" name="cor-raca" value="parda">
+                            <label for="parda">Parda</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="amarela" name="cor-raca" value="amarela">
+                            <label for="amarela">Amarela</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="indigena" name="cor-raca" value="indigena">
+                            <label for="indigena">Indígena/Etnia</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <label for="indigena">Outra</label>
+                            <input type="text" id="etnia-especificar" name="etnia-especificar" maxlength="8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="nav-bar pessoais">
+            <span class="nav-left">DADOS RESIDENCIAIS</span>
+        </nav>
+
+        <section class="form-section">
+            <div class="form-row">
+                <div class="form-group form-group-full">
+                    <label for="logradouro">Logradouro</label>
+                    <input type="text" id="logradouro" name="logradouro" maxlength="35">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-quarter">
+                    <label for="numero">Número</label>
+                    <input type="number" id="numero" name="numero" >   
+                </div>
+                
+                <div class="form-group form-group-large">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="botafogo" name="bairro" maxlength="15">
+                </div>
+                
+                <div class="form-group form-group-uf">
+                    <label for="uf-residencia">UF</label>
+                    <input type="text" id="uf-residencia" name="uf-residencia" maxlength="2">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-full">
+                    <label for="complemento">Complemento</label>
+                    <input type="text" id="complemento" name="complemento" maxlength="27">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-third">
+                    <label for="codigo-municipio-res">Código do Município</label>
+                    <input type="number" id="codigo-municipio-res" name="codigo-municipio-res" maxlength="7">
+                </div>
+                
+                <div class="form-group form-group-two-thirds">
+                    <label for="municipio-res">Município</label>
+                    <input type="text" id="municipio-res" name="municipio-res" maxlength="15">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-cep">
+                    <label for="cep">CEP</label>
+                    <div class="input-with-separator">
+                        <input type="number" id="cep-parte1" name="cep-parte1">
+                        <span class="separator">-</span>
+                        <input type="number" id="cep-parte2" name="cep-parte2" class="input-small">
+                    </div>
+                </div>
+                
+                <div class="form-group form-group-ddd">
+                    <label for="ddd">DDD</label>
+                    <input type="number" id="ddd" name="ddd">
+                </div>
+                
+                <div class="form-group form-group-telefone">
+                    <label for="telefone">Telefone</label>
+                    <div class="input-with-separator">
+                        <input type="number" id="telefone-parte1" name="telefone-parte1">
+                        <span class="separator">-</span>
+                        <input type="number" id="telefone-parte2" name="telefone-parte2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-full">
+                    <label for="ponto-referencia">Ponto de Referência</label>
+                    <input type="text" id="ponto-referencia" name="ponto-referencia" maxlength="35">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-full">
+                    <label>Escolariedade</label>
+                    <div class="checkbox-row checkbox-row-escolaridade">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="analfabeto" name="escolariedade" value="analfabeto">
+                            <label for="analfabeto">Analfabeto(a)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="fundamental-incompleto" name="escolariedade" value="fundamental-incompleto">
+                            <label for="fundamental-incompleto">Ensino Fundamental Incompleto</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="fundamental-completo" name="escolariedade" value="fundamental-completo">
+                            <label for="fundamental-completo">Ensino Fundamental Completo</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="medio-completo" name="escolariedade" value="medio-completo">
+                            <label for="medio-completo">Ensino Médio Completo</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="superior-completo" name="escolariedade" value="superior-completo">
+                            <label for="superior-completo">Ensino Superior Completo</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="nav-bar pessoais">
+            <span class="nav-left">DADOS DA ANAMNESE (UNIDADE SOLICITANTE)</span>
+        </nav>
+
+        <section class="form-section anamnese-section">
+        <div class="anamnese-grid">
+            <!-- Coluna Esquerda -->
+            <div class="anamnese-col">
+            <!-- Pergunta 1 -->
+            <div class="question-block">
+                <p class="question-text">1- Tem nódulo ou caroço na mama?<span class="obrigatorio">*</span></p>
+                <div class="checkbox-list">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="nodulo-direita" name="nodulo" value="direita">
+                    <label for="nodulo-direita">Sim, mama direita</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="nodulo-esquerda" name="nodulo" value="esquerda">
+                    <label for="nodulo-esquerda">Sim, mama esquerda</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="nodulo-nao" name="nodulo" value="nao">
+                    <label for="nodulo-nao">Não</label>
+                </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="question-block">
+                <p class="question-text">2- Apresenta risco elevado* para câncer de mama?<span class="obrigatorio">*</span></p>
+                <div class="checkbox-list">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="risco-sim" name="risco" value="sim">
+                    <label for="risco-sim">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="risco-nao" name="risco" value="nao">
+                    <label for="risco-nao">Não</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="risco-nao-sabe" name="risco" value="nao-sabe">
+                    <label for="risco-nao-sabe">Não sabe</label>
+                </div>
+                </div>
+                <div class="risk-note">
+                <p><strong>• Risco elevado são:</strong></p>
+                <p>Mulheres com história familiar, de pelo menos, um parente de primeiro grau com</p>
+                <p class="risk-subtext">diagnóstico de:</p>
+                <ul>
+                    <li>Câncer de mama antes dos 50 anos de idade;</li>
+                    <li>Câncer de mama bilateral ou câncer de ovário em qualquer faixa etário;</li>
+                </ul>
+                <p>Mulheres com histórico familiar de câncer de mama masculino;</p>
+                <p>Mulheres com diagnóstico histopatológico de lesão mamária proliferativa com atipia ou neoplasia lobular in situ</p>
+                <p>Mulheres com história pessoal de câncer de mama</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="question-block">
+                <p class="question-text">3- Antes desta consulta, teve suas mamas examinadas por um profissional de saúde?<span class="obrigatorio">*</span></p>
+                <div class="checkbox-list">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="exame-sim" name="exame-anterior" value="sim">
+                    <label for="exame-sim">Sim</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="exame-nunca" name="exame-anterior" value="nunca">
+                    <label for="exame-nunca">Nunca foram examinados anteriormente</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="exame-nao-sabe" name="exame-anterior" value="nao-sabe">
+                    <label for="exame-nao-sabe">Não sabe</label>
+                </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="question-block">
+                <p class="question-text">4- Fez mamografia alguma vez?<span class="obrigatorio">*</span></p>
+                <div class="checkbox-list">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="mamografia-sim" name="mamografia" value="sim">
+                    <label for="mamografia-sim">Sim, quando fez a última mamografia?</label>
+                </div>
+                </div>
+                <div class="inline-field">
+                    <label for="mamografia-ano">Ano :</label>
+                    <input type="number" id="mamografia-ano" name="mamografia-ano" maxlength="4" class="input-year dataAcao">
+                </div>
+                <div class="checkbox-list">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="mamografia-nao" name="mamografia" value="nao">
+                    <label for="mamografia-nao">Não</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="mamografia-nao-sabe" name="mamografia" value="nao-sabe">
+                    <label for="mamografia-nao-sabe">Não sabe</label>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Coluna Direita -->
+            <div class="anamnese-col">
+            <!-- Pergunta 5 -->
+            <div class="question-block">
+                <p class="question-text">5- Fez radioterapia na mama ou no plastrão? em que ano?<span class="obrigatorio">*</span></p>
+                <div class="checkbox-list">
+                <div class="checkbox-item-with-input">
+                    <input type="checkbox" id="radio-direita" name="radioterapia" value="direita">
+                    <label for="radio-direita">Sim, mama direita  </label>
+                    <input type="number" id="radio-direita-ano" name="radio-direita-ano" maxlength="4" class="input-year-inline dataAcao">
+                </div>
+                <div class="checkbox-item-with-input">
+                    <input type="checkbox" id="radio-esquerda" name="radioterapia" value="esquerda">
+                    <label for="radio-esquerda">Sim, mama esquerda</label>
+                    <input type="number" id="radio-esquerda-ano" name="radio-esquerda-ano" maxlength="4" class="input-year-inline dataAcao">
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="radio-nao" name="radioterapia" value="nao">
+                    <label for="radio-nao">Não</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="radio-nao-sabe" name="radioterapia" value="nao-sabe">
+                    <label for="radio-nao-sabe">Não sabe</label>
+                </div>
+                </div>
+            </div>
+
+            <!-- Pergunta 6 -->
+            <div class="question-block">
+                <p class="question-text">6- Fez cirurgia de mama? Em que ano?<span class="obrigatorio">*</span></p>
+                <table class="surgery-table">
+                    <thead>
+                        <tr>
+                            <th>Mama Direita</th>
+                            <th></th>
+                            <th>Mama Esquerda</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="number" name="cirurgia-biopsia-incisional-dir" maxlength="4" id="cirurgia-biopsia-incisional-dir" class="input-surgery nao-fez dataAcao"></td>
+                            <td class="surgery-name">Biópsia cirúrgica incisional</td>
+                            <td><input type="number" name="cirurgia-biopsia-incisional-esq" maxlength="4" id="cirurgia-biopsia-incisional-esq" class="input-surgery nao-fez dataAcao"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="cirurgia-biopsia-excisional-dir" maxlength="4" id="cirurgia-biopsia-excisional-dir" class="input-surgery nao-fez dataAcao"></td>
+                            <td class="surgery-name">Biópsia cirúrgica excisional</td>
+                            <td><input type="number" name="cirurgia-biopsia-excisional-esq" maxlength="4" id="cirurgia-biopsia-excisional-esq" class="input-surgery nao-fez dataAcao"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="cirurgia-centralectomia-dir" maxlength="4" id="cirurgia-centralectomia-dir" class="input-surgery nao-fez dataAcao"></td>
+                            <td class="surgery-name">Centralectomia</td>
+                            <td><input type="number" name="cirurgia-centralectomia-esq" maxlength="4" id="cirurgia-centralectomia-esq" class="input-surgery nao-fez dataAcao"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="cirurgia-segmentectomia-dir" maxlength="4" id="cirurgia-segmentectomia-dir" class="input-surgery nao-fez dataAcao"></td>
+                            <td class="surgery-name">Segmentectomia</td>
+                            <td><input type="number" name="cirurgia-segmentectomia-esq" maxlength="4" id="cirurgia-segmentectomia-esq" class="input-surgery nao-fez dataAcao"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="cirurgia-dutectomia-dir" maxlength="4" id="cirurgia-dutectomia-dir" class="input-surgery nao-fez dataAcao"></td>
+                            <td class="surgery-name">Dutectomia</td>
+                            <td><input type="number" name="cirurgia-dutectomia-esq" maxlength="4" id="cirurgia-dutectomia-esq" class="input-surgery nao-fez dataAcao"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="cirurgia-mastectomia-dir" maxlength="4" id="cirurgia-mastectomia-dir" class="input-surgery nao-fez dataAcao"></td>
+                            <td class="surgery-name">Mastectomia</td>
+                            <td><input type="number" name="cirurgia-mastectomia-esq" maxlength="4" id="cirurgia-mastectomia-esq" class="input-surgery nao-fez dataAcao"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="cirurgia-mastectomia-pele-dir" maxlength="4" id="cirurgia-mastectomia-pele-dir" class="input-surgery nao-fez dataAcao"></td>
+                            <td class="surgery-name">Mastectomia poupadora de pele</td>
+                            <td><input type="number" name="cirurgia-mastectomia-pele-esq" maxlength="4" id="cirurgia-mastectomia-pele-esq" class="input-surgery nao-fez dataAcao"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="cirurgia-mastectomia-poupadora-dir" maxlength="4" id="cirurgia-mastectomia-poupadora-dir" class="input-surgery nao-fez dataAcao"></td>
+                            <td class="surgery-name">Mastectomia poupadora de pele e complexo aréolo-popilar</td>
+                            <td><input type="number" name="cirurgia-mastectomia-poupadora-esq" maxlength="4" id="cirurgia-mastectomia-poupadora-esq" class="input-surgery nao-fez dataAcao"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="cirurgia-linfadenectomia-dir" maxlength="4" id="cirurgia-linfadenectomia-dir" class="input-surgery nao-fez dataAcao"></td>
+                            <td class="surgery-name">Linfodenectomia axilar</td>
+                            <td><input type="number" name="cirurgia-linfadenectomia-esq" maxlength="4" id="cirurgia-linfadenectomia-esq" class="input-surgery nao-fez dataAcao"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="cirurgia-biopsia-linfonodo-dir" maxlength="4" id="cirurgia-biopsia-linfonodo-dir" class="input-surgery nao-fez dataAcao"></td>
+                            <td class="surgery-name">Biópsia de linfonodo sentinela</td>
+                            <td><input type="number" name="cirurgia-biopsia-linfonodo-esq" maxlength="4" id="cirurgia-biopsia-linfonodo-esq" class="input-surgery nao-fez dataAcao"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="cirurgia-reconstrucao-dir" maxlength="4" id="cirurgia-reconstrucao-dir" class="input-surgery nao-fez dataAcao"></td>
+                            <td class="surgery-name">Reconstrução mamária</td>
+                            <td><input type="number" name="cirurgia-reconstrucao-esq" maxlength="4" id="cirurgia-reconstrucao-esq" class="input-surgery nao-fez dataAcao"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="cirurgia-mastoplastia-dir" maxlength="4" id="cirurgia-mastoplastia-dir" class="input-surgery nao-fez dataAcao"></td>
+                            <td class="surgery-name">Mastoplastia redutora</td>
+                            <td><input type="number" name="cirurgia-mastoplastia-esq" maxlength="4" id="cirurgia-mastoplastia-esq" class="input-surgery nao-fez dataAcao"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" name="cirurgia-implantes-dir" maxlength="4" id="cirurgia-implantes-dir" class="input-surgery nao-fez dataAcao"></td>
+                            <td class="surgery-name">Inclusão de implantes</td>
+                            <td><input type="number" name="cirurgia-implantes-esq" maxlength="4" id="cirurgia-implantes-esq" class="input-surgery nao-fez dataAcao"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="checkbox-list" style="margin-top: 15px;">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="nao-fez-cirurgia" name="cirurgia" value="X">
+                    <label for="nao-fez-cirurgia">Não fez cirurgia</label>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="form-section salvar">
+            <div class="item">
+                <p>Os itens marcados com " <span class="obrigatorio">*</span> " devem ser preenchidos obrigátoriamente</p>
+            </div>
+            <div class="item">
+                <button class="bnt-salvar" type="submit" disabled>Salvar e Baixar</button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>Sistema de Requisição de Mamografia - Ministério da Saúde</p>
+        </footer>
+
+        <img id="background-anamnese" src="./assets/image/background-anamnese.jpeg"/>
+    </main>
+    <script src="../src/assets/node_modules/jspdf/dist/jspdf.umd.min.js"></script>
+    <script type="module" src="./scripts/js/main.js"></script>
+</body>
+</html>
