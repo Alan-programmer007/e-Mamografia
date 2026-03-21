@@ -14,7 +14,7 @@ export function anamnesePerguntaUmDois(documento){
         espacoTexto(documento, "X", 14.5, 182.5, 0);
     }
     // Nao
-    const checkNaoNodulo = document.getElementById('nodulo-esquerda');
+    const checkNaoNodulo = document.getElementById('nodulo-nao');
     if(checkNaoNodulo.checked){
         espacoTexto(documento, "X", 14.5, 187, 0);
     }

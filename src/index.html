@@ -8,17 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/main.css">
     <link rel="shortcut icon" href="./assets/image/logo-cedim-icons.ico" type="image/x-icon">
-    <title>Mamografia</title>
+    <title>e-Mamografia</title>
 </head>
 <body>
     <header class="header">
         <div class="header-content">
         <div class="logos">
-            <img src="./assets/image/logo-cedim.png" alt="logo do CEDIM" class="logo">
+            <img src="./assets/image/logo-cedim-completa.png" alt="logo do CEDIM" class="logo">
             <div class="logo-divider"></div>
-            <img src="./assets/image/logo-pet-saude.png" alt="logo pet-saúde" class="logo">
+            <img src="./assets/image/logo-pet-saude-completa.png" alt="logo pet-saúde" class="logo">
         </div>
-            <h1 class="app-name">Name APP</h1>
+            <h1 class="app-name"><span id="elementoRosa">e-</span>Mamografia</h1>
         </div>
     </header>
 
@@ -29,7 +29,7 @@
         </nav>
 
         <section class="form-section">
-            <h2 class="section-title">Programa Nacional de Controle ao Câncer de mama</h2>
+            <h2 class="section-title">Programa Nacional de Controle ao Câncer de Mama</h2>
             
             <div class="form-row">
                 <div class="form-group form-group-uf">
@@ -39,7 +39,7 @@
                 
                 <div class="form-group form-group-medium">
                 <label for="cnes">CNES da Unidade de Saúde</label>
-                <input type="text" id="cnes" name="cnes" maxlength="7">
+                <input type="text" value="CEDIM" id="cnes" name="cnes" maxlength="7">
                 </div>
                 
                 <div class="form-group form-group-protocol">
@@ -54,23 +54,23 @@
             <div class="form-row">
                 <div class="form-group form-group-full">
                 <label for="unidade">Unidade de Saúde</label>
-                <input type="text" id="unidade" name="unidade" maxlength="35">
+                <input type="text" value="Centro de Diagnóstico e Imagem" id="unidade" name="unidade" maxlength="35">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group form-group-third">
                 <label for="codigo-municipio">Código do Município</label>
-                <input type="number" id="codigo-municipio" name="codigo-municipio" maxlength="7">
+                <input type="number" value="2704302" id="codigo-municipio" name="codigo-municipio" maxlength="7">
                 </div>
                 
                 <div class="form-group form-group-third">
                 <label for="municipio">Município</label>
-                <input type="text" id="municipio" name="municipio" maxlength="15">
+                <input type="text" value="Maceió" id="municipio" name="municipio" maxlength="15">
                 </div>
                 
                 <div class="form-group form-group-third">
-                <label for="pontuario">Pontuário</label>
+                <label for="pontuario">Prontuário</label>
                 <input type="text" id="pontuario" name="pontuario" maxlength="10">
                 </div>
             </div>
@@ -89,7 +89,7 @@
                 </div>
                 
                 <div class="form-group form-group-sexo">
-                <label>Sexo</label>
+                <label>Sexo <span class="obrigatorio">*</span></label>
                 <div class="checkbox-row">
                     <div class="checkbox-item">
                     <input type="checkbox" id="masculino" name="sexo" value="masculino">
@@ -117,15 +117,15 @@
                 </div>
                     
                 <div class="form-group form-group-half">
-                    <label for="nacionalidade">Nacionalidade</label>
-                    <input type="text" id="nacionalidade" name="nacionalidade" maxlength="16">
+                    <label for="nacionalidade">Nacionalidade <span class="obrigatorio">*</span></label>
+                    <input type="text" id="nacionalidade" name="nacionalidade" maxlength="16" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group form-group-third">
-                    <label for="CPF">CPF</label>
-                    <input type="number" id="CPF" name="CPF" maxlength="11">
+                    <label for="CPF">CPF <span class="obrigatorio">*</span></label>
+                    <input type="number" id="CPF" name="CPF" maxlength="11" required>
                 </div>
                     
                 <div class="form-group form-group-third">
@@ -148,7 +148,7 @@
 
             <div class="form-row">
                 <div class="form-group form-group-full">
-                    <label>Cor/Raça</label>
+                    <label>Cor/Raça <span class="obrigatorio">*</span></label>
                     <div class="checkbox-row checkbox-row-raca">
                         <div class="checkbox-item">
                             <input type="checkbox" id="branca" name="cor-raca" value="branca">
@@ -193,18 +193,18 @@
 
             <div class="form-row">
                 <div class="form-group form-group-quarter">
-                    <label for="numero">Número</label>
-                    <input type="number" id="numero" name="numero" >   
+                    <label for="numero">Número <span class="obrigatorio">*</span></label>
+                    <input type="number" id="numero" name="numero" required>   
                 </div>
                 
                 <div class="form-group form-group-large">
-                    <label for="bairro">Bairro</label>
-                    <input type="text" id="botafogo" name="bairro" maxlength="15">
+                    <label for="bairro">Bairro <span class="obrigatorio">*</span></label>
+                    <input type="text" id="botafogo" name="bairro" maxlength="15" required>
                 </div>
                 
                 <div class="form-group form-group-uf">
-                    <label for="uf-residencia">UF</label>
-                    <input type="text" id="uf-residencia" name="uf-residencia" maxlength="2">
+                    <label for="uf-residencia">UF <span class="obrigatorio">*</span></label>
+                    <input type="text" id="uf-residencia" name="uf-residencia" maxlength="2" required>
                 </div>
             </div>
 
@@ -222,18 +222,18 @@
                 </div>
                 
                 <div class="form-group form-group-two-thirds">
-                    <label for="municipio-res">Município</label>
-                    <input type="text" id="municipio-res" name="municipio-res" maxlength="15">
+                    <label for="municipio-res">Município <span class="obrigatorio">*</span></label>
+                    <input type="text" id="municipio-res" name="municipio-res" maxlength="15" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group form-group-cep">
-                    <label for="cep">CEP</label>
+                    <label for="cep">CEP <span class="obrigatorio">*</span></label>
                     <div class="input-with-separator">
-                        <input type="number" id="cep-parte1" name="cep-parte1">
+                        <input type="number" id="cep-parte1" name="cep-parte1" required>
                         <span class="separator">-</span>
-                        <input type="number" id="cep-parte2" name="cep-parte2" class="input-small">
+                        <input type="number" id="cep-parte2" name="cep-parte2" class="input-small" required>
                     </div>
                 </div>
                 
@@ -261,7 +261,7 @@
 
             <div class="form-row">
                 <div class="form-group form-group-full">
-                    <label>Escolariedade</label>
+                    <label>Escolaridade</label>
                     <div class="checkbox-row checkbox-row-escolaridade">
                         <div class="checkbox-item">
                             <input type="checkbox" id="analfabeto" name="escolariedade" value="analfabeto">
@@ -510,7 +510,7 @@
 
         <section class="form-section salvar">
             <div class="item">
-                <p>Os itens marcados com " <span class="obrigatorio">*</span> " devem ser preenchidos obrigátoriamente</p>
+                <p>Os itens marcados com " <span class="obrigatorio">*</span> " devem ser preenchidos obrigatoriamente</p>
             </div>
             <div class="item">
                 <button class="bnt-salvar" type="submit" disabled>Salvar e Baixar</button>

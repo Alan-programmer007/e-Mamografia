@@ -11,7 +11,8 @@ const inputs = document.querySelectorAll('input[required]');
 naoFezCirugia();
 
 bnt.addEventListener('click', () => {
-    const nomePaciente = document.getElementById('nome').value.toUpperCase();
+    const nome = document.getElementById('nome').value.toUpperCase();
+    const nomePaciente = nome.split(" ")[0];
     const documento = new jsPDF();
 
     // Tamanho da tela pdf
