@@ -8,6 +8,7 @@ const ddd = document.getElementById('ddd');
 const telefoneParteUm =document.getElementById('telefone-parte1');
 const telefoneParteDois = document.getElementById('telefone-parte2');
 
+// Limita o quantidade de numeros que pode ser digitada em numero da cas, codigo municipio, CEP, DDD e numero
 numeroCasa.addEventListener("input", function () {
     const maxLength = 6;
     if (this.value.length > maxLength) {

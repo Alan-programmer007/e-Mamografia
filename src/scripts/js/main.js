@@ -6,8 +6,10 @@ import { anamneseSextaGrupoUm, anamneseSextaGrupoDois, anamneseSextaGrupoTres } 
 import { anamnesePerguntaUmDois, anamnesePerguntaTresQuatro, anamnesePerguntaCinco } from "./anamnese.js";
 
 const bnt = document.querySelector('.bnt-salvar')
+const bntLimpar = document.getElementById('bnt-limpar');
 const inputs = document.querySelectorAll('input[required]');
 
+// Chama a funcao nao fez cirugia
 naoFezCirugia();
 
 bnt.addEventListener('click', () => {
@@ -32,26 +34,34 @@ bnt.addEventListener('click', () => {
     unidadePrimeiraLinha(documento);
     unidadeSegundaLinha(documento);
 
+    // Referente a secao INFORMAÇÔES PESSOAIS
     sexo(documento);
     corEtinia(documento);
     pessoaisPrimeiroGrupo(documento);
     pessoaisSegundoGrupo(documento);
 
+    // Referente a secao DADOS RESIDENCIAIS
     residenciaisPrimeiroGrupo(documento);
     residenciaisSegundoGrupo(documento);
     residenciaisTerceiroGrupo(documento);
     escolaridade(documento);
 
-    anamneseSextaGrupoUm(documento);
-    anamneseSextaGrupoDois(documento);
-    anamneseSextaGrupoTres(documento);
-
+    // Referente a secao DADOS DA ANAMNESE (UNIDADE SOLICITANTE) apenas as perguntas 1,2,3,4 e 5
     anamnesePerguntaUmDois(documento);
     anamnesePerguntaTresQuatro(documento);
     anamnesePerguntaCinco(documento);
 
+    // Referente a secao DADOS DA ANAMNESE (UNIDADE SOLICITANTE) apenas a pergunta 6
+    anamneseSextaGrupoUm(documento);
+    anamneseSextaGrupoDois(documento);
+    anamneseSextaGrupoTres(documento);
+
+    // Pegar os terceiro trio de numeros
+    const cpf = document.getElementById('CPF').value
+    const digitosCPF = cpf.slice(6, 9)
+
     // Salvar pdf
-    documento.save(nomePaciente+'.pdf');
+    documento.save(nomePaciente + "-" + digitosCPF +'.pdf');
 })
 
 // Checagem dos capos obrigatorios
@@ -90,9 +100,28 @@ function naoFezCirugia() {
 // Limitar a 4 números as datas
 const datas = document.querySelectorAll('.dataAcao'); 
 datas.forEach(input => { 
-    input.addEventListener("input", function () { 
-        const maxLength = 4; if (this.value.length > maxLength) {
+    input.addEventListener('input', function () { 
+        const maxLength = 4;
+        if (this.value.length > maxLength) {
              this.value = this.value.slice(0, maxLength); 
         } 
     }); 
 });
+
+// Limpar o que já foi preenchido
+bntLimpar.addEventListener('click', () => {
+    // Seleciona todos os inputs dentro da classe limpar
+    const inputs = document.querySelectorAll(".limpar input");
+    // Cria um objeto para armazenar os valores
+    const dados = {};
+    // altera o valor de todos para vazio e false
+    inputs.forEach(input => {
+        // Vazio
+        dados[input.name] = input.value = '';
+        // False
+        if(input.id != "nao-fez-cirurgia"){
+            input.checked = false;
+        }
+        
+    });
+})

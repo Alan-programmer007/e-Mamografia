@@ -28,7 +28,7 @@
             <span class="nav-right">REQUISIÇÃO DE MAMOGRAFIA</span>
         </nav>
 
-        <section class="form-section">
+        <section class="form-section ">
             <h2 class="section-title">Programa Nacional de Controle ao Câncer de Mama</h2>
             
             <div class="form-row">
@@ -54,7 +54,7 @@
             <div class="form-row">
                 <div class="form-group form-group-full">
                 <label for="unidade">Unidade de Saúde</label>
-                <input type="text" value="Centro de Diagnóstico e Imagem" id="unidade" name="unidade" maxlength="35">
+                <input type="text" value="CEDIM" id="unidade" name="unidade" maxlength="35">
                 </div>
             </div>
 
@@ -80,24 +80,30 @@
             <span class="nav-left">INFORMAÇÔES PESSOAIS</span>
         </nav>
 
-        <section class="form-section">
+        <section class="form-section limpar">
                 
             <div class="form-row">
                 <div class="form-group form-group-large">
                     <label for="cartao-sus">Cartão SUS <span class="obrigatorio">*</span></label>
-                    <input type="text" id="cartao-sus" name="cartao-sus" maxlength="15" required>
+                    <input type="text" id="cartao-sus" name="cartao-sus" maxlength="15" placeholder="Ex: 123456789101112" required>
                 </div>
                 
                 <div class="form-group form-group-sexo">
                 <label>Sexo <span class="obrigatorio">*</span></label>
                 <div class="checkbox-row">
-                    <div class="checkbox-item">
-                    <input type="checkbox" id="masculino" name="sexo" value="masculino">
-                    <label for="masculino">Masculino</label>
+                    <div class="custom-radio">
+                        <label for="masculino">
+                            <input type="radio" id="masculino" name="sexo" value="masculino">
+                            <span class="checkmark"></span>
+                            Masculino
+                        </label>
                     </div>
-                    <div class="checkbox-item">
-                    <input type="checkbox" id="feminino" name="sexo" value="feminino">
-                    <label for="feminino">Feminino</label>
+                    <div class="custom-radio">
+                        <label for="feminino">
+                            <input type="radio" id="feminino" name="sexo" value="feminino">
+                            <span class="checkmark"></span>
+                            Feminino
+                        </label>
                     </div>
                 </div>
                 </div>
@@ -106,7 +112,7 @@
             <div class="form-row">
                 <div class="form-group form-group-full">
                     <label for="nome">Nome completo do(a) paciente <span class="obrigatorio">*</span></label>
-                    <input type="text" id="nome" name="nome" maxlength="35" required>
+                    <input type="text" id="nome" name="nome" maxlength="35" placeholder="Ex: Clarice Fernanda" required>
                 </div>
             </div>
 
@@ -118,14 +124,14 @@
                     
                 <div class="form-group form-group-half">
                     <label for="nacionalidade">Nacionalidade <span class="obrigatorio">*</span></label>
-                    <input type="text" id="nacionalidade" name="nacionalidade" maxlength="16" required>
+                    <input type="text" id="nacionalidade" name="nacionalidade" maxlength="16" placeholder="Ex: Brasileira" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group form-group-third">
                     <label for="CPF">CPF <span class="obrigatorio">*</span></label>
-                    <input type="number" id="CPF" name="CPF" maxlength="11" required>
+                    <input type="number" id="CPF" name="CPF" maxlength="11" placeholder="Ex: 12345678910" required>
                 </div>
                     
                 <div class="form-group form-group-third">
@@ -135,14 +141,14 @@
                     
                 <div class="form-group form-group-third">
                     <label for="idade">Idade <span class="obrigatorio">*</span></label>
-                    <input type="number" id="idade" name="idade" min="0" max="99" required>
+                    <input type="number" id="idade" name="idade" min="0" max="99" placeholder="Ex: 89" required>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group form-group-full">
                     <label for="mae">Nome completo da mãe <span class="obrigatorio">*</span></label>
-                    <input type="text" id="mae" name="mae" maxlength="35" required>
+                    <input type="text" id="mae" name="mae" maxlength="35" placeholder="Ex: Maria Isabel" required>
                 </div>
             </div>
 
@@ -150,28 +156,50 @@
                 <div class="form-group form-group-full">
                     <label>Cor/Raça <span class="obrigatorio">*</span></label>
                     <div class="checkbox-row checkbox-row-raca">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="branca" name="cor-raca" value="branca">
-                            <label for="branca">Branca</label>
+                        <div class="custom-radio">
+                            <label for="branca">
+                                <input type="radio" id="branca" name="cor-raca" value="branca">
+                                <span class="checkmark"></span>
+                                Branca
+                            </label>
+                        </div>
+                        <div class="custom-radio">
+                            <label for="preta">
+                                <input type="radio" id="preta" name="cor-raca" value="preta">
+                                <span class="checkmark"></span>
+                                Preta
+                            </label>
+                        </div>
+                        <div class="custom-radio">
+                            <label for="parda">
+                                <input type="radio" id="parda" name="cor-raca" value="parda">
+                                <span class="checkmark"></span>
+                                Parda
+                            </label>
+                        </div>
+                        <div class="custom-radio">
+                            <label for="amarela">
+                                <input type="radio" id="amarela" name="cor-raca" value="amarela">
+                                <span class="checkmark"></span>
+                                Amarela
+                            </label>
+                        </div>
+                        <div class="custom-radio">
+                            <label for="indigena">
+                                <input type="radio" id="indigena" name="cor-raca" value="indigena">
+                                <span class="checkmark"></span>
+                                Indígena/Etnia
+                            </label>
+                        </div>
+                        <div class="custom-radio">
+                            <label for="Outra">
+                                <input type="radio" id="Outra" name="cor-raca" value="Outra">
+                                <span class="checkmark"></span>
+                                Outra
+                            </label>
                         </div>
                         <div class="checkbox-item">
-                            <input type="checkbox" id="preta" name="cor-raca" value="preta">
-                            <label for="preta">Preta</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="parda" name="cor-raca" value="parda">
-                            <label for="parda">Parda</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="amarela" name="cor-raca" value="amarela">
-                            <label for="amarela">Amarela</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="indigena" name="cor-raca" value="indigena">
-                            <label for="indigena">Indígena/Etnia</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <label for="indigena">Outra</label>
+                            <label for="Outra">Outra</label>
                             <input type="text" id="etnia-especificar" name="etnia-especificar" maxlength="8">
                         </div>
                     </div>
@@ -183,7 +211,7 @@
             <span class="nav-left">DADOS RESIDENCIAIS</span>
         </nav>
 
-        <section class="form-section">
+        <section class="form-section limpar">
             <div class="form-row">
                 <div class="form-group form-group-full">
                     <label for="logradouro">Logradouro</label>
@@ -194,17 +222,17 @@
             <div class="form-row">
                 <div class="form-group form-group-quarter">
                     <label for="numero">Número <span class="obrigatorio">*</span></label>
-                    <input type="number" id="numero" name="numero" required>   
+                    <input type="number" id="numero" name="numero" placeholder="Ex: 123" required>   
                 </div>
                 
                 <div class="form-group form-group-large">
                     <label for="bairro">Bairro <span class="obrigatorio">*</span></label>
-                    <input type="text" id="botafogo" name="bairro" maxlength="15" required>
+                    <input type="text" id="botafogo" name="bairro" maxlength="15" placeholder="Ex: Centro" required>
                 </div>
                 
                 <div class="form-group form-group-uf">
                     <label for="uf-residencia">UF <span class="obrigatorio">*</span></label>
-                    <input type="text" id="uf-residencia" name="uf-residencia" maxlength="2" required>
+                    <input type="text" id="uf-residencia" name="uf-residencia" maxlength="2" placeholder="Ex: AL" required>
                 </div>
             </div>
 
@@ -223,7 +251,7 @@
                 
                 <div class="form-group form-group-two-thirds">
                     <label for="municipio-res">Município <span class="obrigatorio">*</span></label>
-                    <input type="text" id="municipio-res" name="municipio-res" maxlength="15" required>
+                    <input type="text" id="municipio-res" name="municipio-res" maxlength="15" placeholder="Ex: Maceió" required>
                 </div>
             </div>
 
@@ -231,9 +259,9 @@
                 <div class="form-group form-group-cep">
                     <label for="cep">CEP <span class="obrigatorio">*</span></label>
                     <div class="input-with-separator">
-                        <input type="number" id="cep-parte1" name="cep-parte1" required>
+                        <input type="number" id="cep-parte1" name="cep-parte1" placeholder="Ex: 12345" required>
                         <span class="separator">-</span>
-                        <input type="number" id="cep-parte2" name="cep-parte2" class="input-small" required>
+                        <input type="number" id="cep-parte2" name="cep-parte2" class="input-small" placeholder="Ex: 678" required>
                     </div>
                 </div>
                 
@@ -263,25 +291,41 @@
                 <div class="form-group form-group-full">
                     <label>Escolaridade</label>
                     <div class="checkbox-row checkbox-row-escolaridade">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="analfabeto" name="escolariedade" value="analfabeto">
-                            <label for="analfabeto">Analfabeto(a)</label>
+                        <div class="custom-radio">
+                            <label for="analfabeto">
+                                <input type="radio" id="analfabeto" name="escolariedade" value="analfabeto">
+                                <span class="checkmark"></span>
+                                Analfabeto(a)
+                            </label>
                         </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="fundamental-incompleto" name="escolariedade" value="fundamental-incompleto">
-                            <label for="fundamental-incompleto">Ensino Fundamental Incompleto</label>
+                        <div class="custom-radio">
+                            <label for="fundamental-incompleto">
+                                <input type="radio" id="fundamental-incompleto" name="escolariedade" value="fundamental-incompleto">
+                                <span class="checkmark"></span>
+                                Ensino Fundamental Incompleto
+                            </label>
                         </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="fundamental-completo" name="escolariedade" value="fundamental-completo">
-                            <label for="fundamental-completo">Ensino Fundamental Completo</label>
+                        <div class="custom-radio">
+
+                            <label for="fundamental-completo">
+                                <input type="radio" id="fundamental-completo" name="escolariedade" value="fundamental-completo">
+                                <span class="checkmark"></span>
+                                Ensino Fundamental Completo
+                            </label>
                         </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="medio-completo" name="escolariedade" value="medio-completo">
-                            <label for="medio-completo">Ensino Médio Completo</label>
+                        <div class="custom-radio">
+                            <label for="medio-completo">
+                                <input type="radio" id="medio-completo" name="escolariedade" value="medio-completo">
+                                <span class="checkmark"></span>
+                                Ensino Médio Completo
+                            </label>
                         </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="superior-completo" name="escolariedade" value="superior-completo">
-                            <label for="superior-completo">Ensino Superior Completo</label>
+                        <div class="custom-radio">
+                            <label for="superior-completo">
+                                <input type="radio" id="superior-completo" name="escolariedade" value="superior-completo">
+                                <span class="checkmark"></span>
+                                Ensino Superior Completo
+                            </label>
                         </div>
                     </div>
                 </div>
@@ -292,7 +336,7 @@
             <span class="nav-left">DADOS DA ANAMNESE (UNIDADE SOLICITANTE)</span>
         </nav>
 
-        <section class="form-section anamnese-section">
+        <section class="form-section anamnese-section limpar">
         <div class="anamnese-grid">
             <!-- Coluna Esquerda -->
             <div class="anamnese-col">
@@ -300,17 +344,26 @@
             <div class="question-block">
                 <p class="question-text">1- Tem nódulo ou caroço na mama?<span class="obrigatorio">*</span></p>
                 <div class="checkbox-list">
-                <div class="checkbox-item">
-                    <input type="checkbox" id="nodulo-direita" name="nodulo" value="direita">
-                    <label for="nodulo-direita">Sim, mama direita</label>
+                <div class="custom-radio">
+                    <label for="nodulo-direita">
+                        <input type="radio" id="nodulo-direita" name="nodulo" value="direita">
+                        <span class="checkmark"></span>
+                        Sim, mama direita
+                    </label>
                 </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="nodulo-esquerda" name="nodulo" value="esquerda">
-                    <label for="nodulo-esquerda">Sim, mama esquerda</label>
+                <div class="custom-radio">
+                    <label for="nodulo-esquerda">
+                        <input type="radio" id="nodulo-esquerda" name="nodulo" value="esquerda">
+                        <span class="checkmark"></span>
+                        Sim, mama esquerda
+                    </label>
                 </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="nodulo-nao" name="nodulo" value="nao">
-                    <label for="nodulo-nao">Não</label>
+                <div class="custom-radio">
+                    <label for="nodulo-nao">
+                        <input type="radio" id="nodulo-nao" name="nodulo" value="nao">
+                        <span class="checkmark"></span>
+                        Não
+                    </label>
                 </div>
                 </div>
             </div>
@@ -319,17 +372,26 @@
             <div class="question-block">
                 <p class="question-text">2- Apresenta risco elevado* para câncer de mama?<span class="obrigatorio">*</span></p>
                 <div class="checkbox-list">
-                <div class="checkbox-item">
-                    <input type="checkbox" id="risco-sim" name="risco" value="sim">
-                    <label for="risco-sim">Sim</label>
+                <div class="custom-radio">
+                    <label for="risco-sim">
+                        <input type="radio" id="risco-sim" name="risco" value="sim">
+                        <span class="checkmark"></span>
+                        Sim
+                    </label>
                 </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="risco-nao" name="risco" value="nao">
-                    <label for="risco-nao">Não</label>
+                <div class="custom-radio">
+                    <label for="risco-nao">
+                        <input type="radio" id="risco-nao" name="risco" value="nao">
+                        <span class="checkmark"></span> 
+                        Não
+                    </label>
                 </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="risco-nao-sabe" name="risco" value="nao-sabe">
-                    <label for="risco-nao-sabe">Não sabe</label>
+                <div class="custom-radio">
+                    <label for="risco-nao-sabe">
+                        <input type="radio" id="risco-nao-sabe" name="risco" value="nao-sabe">
+                        <span class="checkmark"></span>
+                        Não sabe
+                    </label>
                 </div>
                 </div>
                 <div class="risk-note">
@@ -350,17 +412,26 @@
             <div class="question-block">
                 <p class="question-text">3- Antes desta consulta, teve suas mamas examinadas por um profissional de saúde?<span class="obrigatorio">*</span></p>
                 <div class="checkbox-list">
-                <div class="checkbox-item">
-                    <input type="checkbox" id="exame-sim" name="exame-anterior" value="sim">
-                    <label for="exame-sim">Sim</label>
+                <div class="custom-radio">                   
+                    <label for="exame-sim">
+                        <input type="radio" id="exame-sim" name="exame-anterior" value="sim">
+                        <span class="checkmark"></span>
+                        Sim
+                    </label>
                 </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="exame-nunca" name="exame-anterior" value="nunca">
-                    <label for="exame-nunca">Nunca foram examinados anteriormente</label>
+                <div class="custom-radio">                   
+                    <label for="exame-nunca">
+                        <input type="radio" id="exame-nunca" name="exame-anterior" value="nunca">
+                        <span class="checkmark"></span>
+                        Nunca foram examinados anteriormente
+                    </label>
                 </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="exame-nao-sabe" name="exame-anterior" value="nao-sabe">
-                    <label for="exame-nao-sabe">Não sabe</label>
+                <div class="custom-radio">                   
+                    <label for="exame-nao-sabe">
+                        <input type="radio" id="exame-nao-sabe" name="exame-anterior" value="nao-sabe">
+                        <span class="checkmark"></span>
+                        Não sabe
+                    </label>
                 </div>
                 </div>
             </div>
@@ -369,23 +440,32 @@
             <div class="question-block">
                 <p class="question-text">4- Fez mamografia alguma vez?<span class="obrigatorio">*</span></p>
                 <div class="checkbox-list">
-                <div class="checkbox-item">
-                    <input type="checkbox" id="mamografia-sim" name="mamografia" value="sim">
-                    <label for="mamografia-sim">Sim, quando fez a última mamografia?</label>
+                <div class="custom-radio">                   
+                    <label for="mamografia-sim">
+                        <input type="radio" id="mamografia-sim" name="mamografia" value="sim">
+                        <span class="checkmark"></span>
+                        Sim, quando fez a última mamografia?
+                    </label>
                 </div>
                 </div>
                 <div class="inline-field">
                     <label for="mamografia-ano">Ano :</label>
-                    <input type="number" id="mamografia-ano" name="mamografia-ano" maxlength="4" class="input-year dataAcao">
+                    <input type="number" id="mamografia-ano" name="mamografia-ano" placeholder="Ex: 2025" class="input-year dataAcao">
                 </div>
                 <div class="checkbox-list">
-                <div class="checkbox-item">
-                    <input type="checkbox" id="mamografia-nao" name="mamografia" value="nao">
-                    <label for="mamografia-nao">Não</label>
+                <div class="custom-radio">
+                  <label for="mamografia-nao">
+                        <input type="radio" id="mamografia-nao" name="mamografia" value="nao">
+                        <span class="checkmark"></span>
+                        Não
+                    </label>
                 </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="mamografia-nao-sabe" name="mamografia" value="nao-sabe">
-                    <label for="mamografia-nao-sabe">Não sabe</label>
+                <div class="custom-radio">                  
+                    <label for="mamografia-nao-sabe">
+                        <input type="radio" id="mamografia-nao-sabe" name="mamografia" value="nao-sabe">
+                        <span class="checkmark"></span>
+                        Não sabe
+                    </label>
                 </div>
                 </div>
             </div>
@@ -397,23 +477,35 @@
             <div class="question-block">
                 <p class="question-text">5- Fez radioterapia na mama ou no plastrão? em que ano?<span class="obrigatorio">*</span></p>
                 <div class="checkbox-list">
-                <div class="checkbox-item-with-input">
-                    <input type="checkbox" id="radio-direita" name="radioterapia" value="direita">
-                    <label for="radio-direita">Sim, mama direita  </label>
-                    <input type="number" id="radio-direita-ano" name="radio-direita-ano" maxlength="4" class="input-year-inline dataAcao">
+                <div class="custom-radio">                   
+                    <label for="radio-direita">
+                        <input type="radio" id="radio-direita" name="radioterapia" value="direita">
+                        <span class="checkmark"></span>
+                        Sim, mama direita  
+                    </label>
+                    <input type="number" id="radio-direita-ano" name="radio-direita-ano" placeholder="Ex: 2025" class="input-year-inline dataAcao">
                 </div>
-                <div class="checkbox-item-with-input">
-                    <input type="checkbox" id="radio-esquerda" name="radioterapia" value="esquerda">
-                    <label for="radio-esquerda">Sim, mama esquerda</label>
-                    <input type="number" id="radio-esquerda-ano" name="radio-esquerda-ano" maxlength="4" class="input-year-inline dataAcao">
+                <div class="custom-radio">
+                    <label for="radio-esquerda">
+                        <input type="radio" id="radio-esquerda" name="radioterapia" value="esquerda">
+                        <span class="checkmark"></span>
+                        Sim, mama esquerda
+                    </label>
+                    <input type="number" id="radio-esquerda-ano" name="radio-esquerda-ano" placeholder="Ex: 2025" class="input-year-inline dataAcao">
                 </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="radio-nao" name="radioterapia" value="nao">
-                    <label for="radio-nao">Não</label>
+                <div class="custom-radio">                   
+                    <label for="radio-nao">
+                        <input type="radio" id="radio-nao" name="radioterapia" value="nao">
+                        <span class="checkmark"></span>
+                        Não
+                    </label>
                 </div>
-                <div class="checkbox-item">
-                    <input type="checkbox" id="radio-nao-sabe" name="radioterapia" value="nao-sabe">
-                    <label for="radio-nao-sabe">Não sabe</label>
+                <div class="custom-radio">                   
+                    <label for="radio-nao-sabe">
+                        <input type="radio" id="radio-nao-sabe" name="radioterapia" value="nao-sabe">
+                        <span class="checkmark"></span>
+                        Não sabe
+                    </label>
                 </div>
                 </div>
             </div>
@@ -514,6 +606,7 @@
             </div>
             <div class="item">
                 <button class="bnt-salvar" type="submit" disabled>Salvar e Baixar</button>
+                <button class="bnt-salvar" id="bnt-limpar">Limpar</button>
             </div>
         </section>
 

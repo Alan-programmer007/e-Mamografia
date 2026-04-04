@@ -3,6 +3,7 @@ import { espacoTexto } from "./espaco.js";
 const CPF = document.getElementById("CPF")
 const idade = document.getElementById("idade")
 
+// Limita o quantidade de numeros que pode ser digitada em CPF e Idade
 CPF.addEventListener("input", function () {
     const maxLength = 11;
     if (this.value.length > maxLength) {
