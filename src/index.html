@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alan Da Silva">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -118,7 +119,7 @@
 
             <div class="form-row">
                 <div class="form-group form-group-half">
-                    <label for="apelido">Apelido do(a) paciente</label>
+                    <label for="apelido">Nome Social</label>
                     <input type="text" id="apelido" name="apelido" maxlength="19">
                 </div>
                     
@@ -195,7 +196,7 @@
                             <label for="Outra">
                                 <input type="radio" id="Outra" name="cor-raca" value="Outra">
                                 <span class="checkmark"></span>
-                                Outra
+                                Não Soube Informar
                             </label>
                         </div>
                         <div class="checkbox-item">
@@ -214,8 +215,8 @@
         <section class="form-section limpar">
             <div class="form-row">
                 <div class="form-group form-group-full">
-                    <label for="logradouro">Logradouro</label>
-                    <input type="text" id="logradouro" name="logradouro" maxlength="35">
+                    <label for="logradouro">Logradouro <span class="obrigatorio">*</span></label>
+                    <input type="text" id="logradouro" name="logradouro" maxlength="35" required>
                 </div>
             </div>
 
@@ -616,7 +617,7 @@
 
         <img id="background-anamnese" src="./assets/image/background-anamnese.jpeg"/>
     </main>
-    <script src="../src/assets/node_modules/jspdf/dist/jspdf.umd.min.js"></script>
+    <script src="../node_modules/jspdf/dist/jspdf.umd.min.js"></script>
     <script type="module" src="./scripts/js/main.js"></script>
 </body>
 </html>

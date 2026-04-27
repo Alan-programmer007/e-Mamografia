@@ -1,5 +1,34 @@
 {
   "dependencies": {
     "jspdf": "^4.1.0"
+  },
+  "name": "mamografia",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "dev": "npx electron .",
+    "build": "npx electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^41.2.2",
+    "electron-builder": "^26.8.1"
+  },
+  "build": {
+  "appId": "com.mamografia.app",
+  "productName": "Mamografia",
+  "directories": {
+    "buildResources": "build"
+  },
+  "win": {
+    "target": "nsis",
+    "icon": "logo-cedim.ico"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Mamografia"
   }
+}
 }
