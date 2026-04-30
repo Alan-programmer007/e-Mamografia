@@ -1,5 +1,4 @@
-import { espacoTexto } from "./espaco.js";
-import { validarNumero } from './utils.js';
+import { espacoTexto, validarNumero } from "../ferramentas/utils.js";
 
 const numeroCasa = document.getElementById('numero');
 const codigoMunicipio = document.getElementById('codigo-municipio-res');

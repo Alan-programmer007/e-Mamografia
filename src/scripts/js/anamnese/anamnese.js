@@ -1,4 +1,4 @@
-import { espacoTexto } from "./espaco.js";
+import { espacoTexto, validarNumero } from "../ferramentas/utils.js";
 
 
 export function anamnesePerguntaUmDois(documento){

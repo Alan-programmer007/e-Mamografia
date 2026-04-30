@@ -1,9 +1,10 @@
 const { jsPDF } = window.jspdf;
-import { unidadePrimeiraLinha, unidadeSegundaLinha } from "./unidade.js";
-import { sexo, corEtinia, pessoaisPrimeiroGrupo, pessoaisSegundoGrupo } from "./pessoais.js";
-import { residenciaisPrimeiroGrupo, residenciaisSegundoGrupo, residenciaisTerceiroGrupo, escolaridade } from "./residenciais.js";
-import { anamneseSextaGrupoUm, anamneseSextaGrupoDois, anamneseSextaGrupoTres } from "./sextaanamnese.js";
-import { anamnesePerguntaUmDois, anamnesePerguntaTresQuatro, anamnesePerguntaCinco } from "./anamnese.js";
+import { unidadePrimeiraLinha, unidadeSegundaLinha } from "./secoes/unidade.js";
+import { sexo, corEtinia, pessoaisPrimeiroGrupo, pessoaisSegundoGrupo } from "./secoes/pessoais.js";
+import { residenciaisPrimeiroGrupo, residenciaisSegundoGrupo, residenciaisTerceiroGrupo, escolaridade } from "./secoes/residenciais.js";
+import { anamneseSextaGrupoUm, anamneseSextaGrupoDois, anamneseSextaGrupoTres } from "./anamnese/sextaanamnese.js";
+import { anamnesePerguntaUmDois, anamnesePerguntaTresQuatro, anamnesePerguntaCinco } from "./anamnese/anamnese.js";
+import { naoFezCirugia } from "./ferramentas/funcionalidades.js";
 
 const bnt = document.querySelector('.bnt-salvar')
 const bntLimpar = document.getElementById('bnt-limpar');
@@ -74,29 +75,6 @@ inputs.forEach(input => {
     input.addEventListener('input', verificarCampos);
 });
 
-// Não fez a cirugia desabilita os outros campos
-function naoFezCirugia() { 
-    const checkNaoFez = document.getElementById('nao-fez-cirurgia'); 
-    const naoFez = document.querySelectorAll('.nao-fez'); 
-    checkNaoFez.addEventListener('change', () => { 
-        naoFez.forEach(input => { 
-            if (checkNaoFez.checked) { 
-                // desativa 
-                input.disabled = true; 
-                // limpa valor 
-                input.value = ''; 
-                // adiciona classe para borda diferente 
-                input.classList.add('desativado'); 
-            } else { 
-                // reativa 
-                input.disabled = false; 
-                // remove classe 
-                input.classList.remove('desativado'); 
-            }
-        }); 
-    }); 
-}
-
 // Limitar a 4 números as datas
 const datas = document.querySelectorAll('.dataAcao'); 
 datas.forEach(input => { 
@@ -118,10 +96,13 @@ bntLimpar.addEventListener('click', () => {
     inputs.forEach(input => {
         // Vazio
         dados[input.name] = input.value = '';
-        // False
-        if(input.id != "nao-fez-cirurgia"){
-            input.checked = false;
-        }
-        
+        // Desmarca as opcoes radio
+        dados[input.name] = input.checked = false;
+        // Remove a classe de desativado
+        input.classList.remove('desativado');
+        // Reativa os campos desativados
+        input.disabled = false;
     });
+        // Desabilita novamente o botao salvar
+        bnt.disabled = true;
 })

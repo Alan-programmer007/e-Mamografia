@@ -1,4 +1,4 @@
-import { espacoTexto } from "./espaco.js";
+import { espacoTexto, validarNumero } from "../ferramentas/utils.js";
 
 const CPF = document.getElementById("CPF")
 const idade = document.getElementById("idade")

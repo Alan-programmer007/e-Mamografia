@@ -1,3 +1,12 @@
+export function validarNumero(event){
+    const restrictKeys = ['e', 'E', '-', '+']
+
+    if(restrictKeys.includes(event.key)){
+        event.preventDefault()
+        return false;
+    }
+}
+
 // Ajusta o espacamento entre as letras
 export function espacoTexto(documento, texto, startX, startY, espaco) {
     let x = startX;

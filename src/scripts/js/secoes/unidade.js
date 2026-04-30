@@ -1,4 +1,4 @@
-import { espacoTexto } from "./espaco.js";
+import { espacoTexto, validarNumero } from "../ferramentas/utils.js";
 
 const CODIGO = document.getElementById('codigo-municipio')
 
