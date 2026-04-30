@@ -9,7 +9,7 @@
     display: none;
 }
 
-.invalido {
+input.invalido {
     border: 2px red solid;
 }
 

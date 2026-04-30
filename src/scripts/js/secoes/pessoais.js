@@ -1,15 +1,36 @@
-import { espacoTexto, validarNumero } from "../ferramentas/utils.js";
+import { espacoTexto, configurarCampoNumerico, filtrarTeclasNumericas, validarCPF} from "../ferramentas/utils.js";
 
 const CPF = document.getElementById("CPF")
 const idade = document.getElementById("idade")
 
 // Limita o quantidade de numeros que pode ser digitada em CPF e Idade
-CPF.addEventListener("input", function () {
-    const maxLength = 11;
-    if (this.value.length > maxLength) {
-        this.value = this.value.slice(0, maxLength);
+CPF.addEventListener("keydown", filtrarTeclasNumericas);
+
+CPF.addEventListener("input", (event) => {
+    let value = event.target.value.replace(/\D/g, ''); // Remove tudo que não é número
+    
+    // Aplica a máscara
+    value = value.replace(/(\d{3})(\d)/, '$1.$2');
+    value = value.replace(/(\d{3})(\d)/, '$1.$2');
+    value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+    
+    event.target.value = value; 
+});
+
+// Verificação de CPF ao sair do campo
+CPF.addEventListener("keydown", () => {
+    if (CPF.value.length > 0) {
+        const ehValido = validarCPF(CPF.value);
+        
+        if (!ehValido) {
+            CPF.classList.add("invalido");
+        } else {
+            CPF.classList.remove("invalido");
+        }
     }
 });
+
+
 idade.addEventListener("input", function () {
     const min = parseInt(this.min);
     const max = parseInt(this.max);

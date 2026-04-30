@@ -1,13 +1,8 @@
-import { espacoTexto, validarNumero } from "../ferramentas/utils.js";
+import { espacoTexto, configurarCampoNumerico} from "../ferramentas/utils.js";
 
 const CODIGO = document.getElementById('codigo-municipio')
 
-CODIGO.addEventListener("input", function () {
-    const maxLength = 7;
-    if (this.value.length > maxLength) {
-        this.value = this.value.slice(0, maxLength);
-    }
-});
+configurarCampoNumerico(CODIGO, 7)
 
 // Referente a secao que trata da identificacao da unidade
 export function unidadePrimeiraLinha(documento){

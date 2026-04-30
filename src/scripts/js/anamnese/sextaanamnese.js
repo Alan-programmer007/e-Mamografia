@@ -1,4 +1,4 @@
-import { espacoTexto, validarNumero } from "../ferramentas/utils.js";
+import { espacoTexto } from "../ferramentas/utils.js";
 
 export function anamneseSextaGrupoUm(documento){
     // Biopsa inciosional

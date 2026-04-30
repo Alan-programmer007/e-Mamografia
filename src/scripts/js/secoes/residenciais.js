@@ -1,4 +1,4 @@
-import { espacoTexto, validarNumero } from "../ferramentas/utils.js";
+import { espacoTexto, configurarCampoNumerico} from "../ferramentas/utils.js";
 
 const numeroCasa = document.getElementById('numero');
 const codigoMunicipio = document.getElementById('codigo-municipio-res');
@@ -8,52 +8,14 @@ const ddd = document.getElementById('ddd');
 const telefoneParteUm =document.getElementById('telefone-parte1');
 const telefoneParteDois = document.getElementById('telefone-parte2');
 
-// Limita o quantidade de numeros que pode ser digitada em numero da cas, codigo municipio, CEP, DDD e numero
-numeroCasa.addEventListener("keydown", validarNumero);
-
-numeroCasa.addEventListener("input", function () {
-    const maxLength = 6;
-    
-    if (this.value.length > maxLength) {
-        this.value = this.value.slice(0, maxLength);
-    }
-});
-codigoMunicipio.addEventListener("input", function () {
-    const maxLength = 7;
-    if (this.value.length > maxLength) {
-        this.value = this.value.slice(0, maxLength);
-    }
-});
-cepParteUm.addEventListener("input", function () {
-    const maxLength = 5;
-    if (this.value.length > maxLength) {
-        this.value = this.value.slice(0, maxLength);
-    }
-});
-cepParteDois.addEventListener("input", function () {
-    const maxLength = 3;
-    if (this.value.length > maxLength) {
-        this.value = this.value.slice(0, maxLength);
-    }
-});
-ddd.addEventListener("input", function () {
-    const maxLength = 2;
-    if (this.value.length > maxLength) {
-        this.value = this.value.slice(0, maxLength);
-    }
-});
-telefoneParteUm.addEventListener("input", function () {
-    const maxLength = 4;
-    if (this.value.length > maxLength) {
-        this.value = this.value.slice(0, maxLength);
-    }
-});
-telefoneParteDois.addEventListener("input", function () {
-    const maxLength = 4;
-    if (this.value.length > maxLength) {
-        this.value = this.value.slice(0, maxLength);
-    }
-});
+// Limita o quantidade de numeros que pode ser digitada em numero da casa
+configurarCampoNumerico(numeroCasa, 6);
+configurarCampoNumerico(codigoMunicipio, 7);
+configurarCampoNumerico(cepParteUm, 5);
+configurarCampoNumerico(cepParteDois, 3);
+configurarCampoNumerico(ddd, 2)
+configurarCampoNumerico(telefoneParteUm, 4);
+configurarCampoNumerico(telefoneParteDois, 4);
 
 export function residenciaisPrimeiroGrupo(documento){
     const LOGRADOURO = document.getElementById('logradouro').value.toLocaleUpperCase();
