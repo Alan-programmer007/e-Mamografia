@@ -29,6 +29,14 @@
     gap: 35px;
   }
 
+    .divisoria {
+    border-top: 3px solid var(--secong-text-color);
+}
+
+  .indicacao-clinica .direita {
+    border-right: none; 
+  }
+  
   .bnt {
     padding: 16px 80px;
   }

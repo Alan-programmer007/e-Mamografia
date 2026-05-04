@@ -1,11 +1,14 @@
-import { espacoTexto, configurarCampoNumerico, filtrarTeclasNumericas, validarCPF} from "../ferramentas/utils.js";
+import { espacoTexto, configurarCampoNumerico, filtrarTeclasNumericas, validarCPF, calcularIdade} from "../ferramentas/utils.js";
 
 const CPF = document.getElementById("CPF")
+const CARTAOSUS = document.getElementById('cartao-sus')
 const idade = document.getElementById("idade")
+const dataNascimento = document.getElementById("nascimento");
 
 // Limita o quantidade de numeros que pode ser digitada em CPF e Idade
 CPF.addEventListener("keydown", filtrarTeclasNumericas);
 
+// Mascara do CPF
 CPF.addEventListener("input", (event) => {
     let value = event.target.value.replace(/\D/g, ''); // Remove tudo que não é número
     
@@ -17,8 +20,8 @@ CPF.addEventListener("input", (event) => {
     event.target.value = value; 
 });
 
-// Verificação de CPF ao sair do campo
-CPF.addEventListener("keydown", () => {
+// Verifica se o CPF adicionado e valido
+CPF.addEventListener("keydonw", () => {
     if (CPF.value.length > 0) {
         const ehValido = validarCPF(CPF.value);
         
@@ -30,18 +33,33 @@ CPF.addEventListener("keydown", () => {
     }
 });
 
+CARTAOSUS.addEventListener("keydown", filtrarTeclasNumericas);
 
-idade.addEventListener("input", function () {
-    const min = parseInt(this.min);
-    const max = parseInt(this.max);
-    let valor = parseInt(this.value);
+CARTAOSUS.addEventListener("input", () => {
+    let value = event.target.value.replace(/\D/g, ''); // só números
 
-    if (isNaN(valor)) return; // ignora se não for número
+    // Aplica a máscara conforme o usuário digita
+    if (value.length > 3) {
+        value = value.replace(/^(\d{3})(\d)/, "$1 $2");
+    }
+    if (value.length > 7) {
+        value = value.replace(/^(\d{3}\s\d{4})(\d)/, "$1 $2");
+    }
+    if (value.length > 11) {
+        value = value.replace(/^(\d{3}\s\d{4}\s\d{4})(\d)/, "$1 $2");
+    }
 
-    if (valor < min) this.value = min;
-    if (valor > max) this.value = max;
+    event.target.value = value;
 });
 
+// Calcula a idade automaticamente
+dataNascimento.addEventListener("change", () => {
+    const idadeCalculada = calcularIdade(dataNascimento.value);
+    
+    if (idadeCalculada >= 0) {
+        idade.value = idadeCalculada
+    }
+});
 
 export function sexo(documento){
     const feminino = document.getElementById('feminino'); 

@@ -1,0 +1,41 @@
+@import url("../base/reset.css");
+@import url("../base/global.css");
+@import url("../base/variables.css");
+
+.achados {
+    padding-left: 0;
+}
+
+.indicacao-clinica {
+    border-top: 3px solid var(--secong-text-color);
+}
+
+.indicacao-clinica .anamnese-col {
+    padding: 20px 25px 20px 0px;
+}
+
+.indicacao-clinica .direita {
+    border-right: 3px solid var(--secong-text-color);
+}
+
+.indicacao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.coluna-checkbox {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.surgery-table .alinhar{
+    padding-left: 25px;
+}
+
+.ultima {
+    padding: 20px 25px 20px 0px;
+    border-top: 3px solid var(--secong-text-color);
+    border-bottom: 3px solid var(--secong-text-color);
+}

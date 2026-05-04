@@ -86,7 +86,7 @@
             <div class="form-row">
                 <div class="form-group form-group-large">
                     <label for="cartao-sus">Cartão SUS <span class="obrigatorio">*</span></label>
-                    <input type="text" id="cartao-sus" name="cartao-sus" maxlength="15" placeholder="Ex: 123456789101112" required>
+                    <input type="text" id="cartao-sus" name="cartao-sus" maxlength="18" placeholder="Ex: 123456789101112"  inputmode="numeric" required>
                 </div>
                 
                 <div class="form-group form-group-sexo">
@@ -599,6 +599,449 @@
             </div>
             </div>
         </div>
+        </section>
+
+        <nav class="nav-bar pessoais">
+            <span class="nav-left">INDICAÇÃO CLÍNICA</span>
+        </nav>
+
+        <section class="form-section ">
+
+            <div class="form-row">
+                <div class="form-group form-group-full">
+                    <div class="checkbox-row">
+                        <label class="question-text">5- Mamografia diagnóstica</label>
+                        <div class="checkbox-list">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="indicacao-mama-direita" value="X">
+                                <label for="mama-direita">Mama Direita</label>
+                            </div>
+                        </div>
+                        <div class="checkbox-list">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="indicacao-mama-esquerda" value="X">
+                                <label for="mama-esquerda">Mama Esquerda</label>
+                            </div>
+                        </div>
+                        <div class="checkbox-list">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="indicacao-ambas" value="X">
+                                <label for="ambas">Ambas</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group form-group-full">
+                    <div class="checkbox-list achados">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="achados-exame" value="X">
+                            <label for="ambas">5a. Achados no exame clínico</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="anamnese-grid indicacao-clinica"> 
+                <!--Coluna Direita -->
+                <div class="anamnese-col direita">
+                    <div class="checkbox-list achados">
+                        <label class="question-text">Mama Direita</label>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lesao-papilar" value="X">
+                            <label for="lesao-papilar">Lesão papilar</label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-list achados">
+                        <label class="question-text">Descarga papilar</label>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="cristalina" value="X">
+                            <label for="cristalina">Cristalina</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hemorrágica" value="X">
+                            <label for="hemorrágica">Hemorrágica</label>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-list achados">
+                        <label class="question-text">Nódulo Localização</label>
+                        <div class="indicacao-grid">
+                            <div class="coluna-checkbox">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QSL" value="X">
+                                    <label for="QSL">QSL</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QIL" value="X">
+                                    <label for="QIL">QIL</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QSM" value="X">
+                                    <label for="QSM">QSM</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QIM" value="X">
+                                    <label for="QIM">QIM</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQlat" value="X">
+                                    <label for="UQlat">UQlat</label>
+                                </div>
+                            </div>
+
+                            <div class="coluna-checkbox">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQsup" value="X">
+                                    <label for="UQsup">UQsup</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQmed" value="X">
+                                    <label for="UQmed">UQmed</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQinf" value="X">
+                                    <label for="UQinf">UQinf</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="RRA" value="X">
+                                    <label for="RRA">RRA</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="PA" value="X">
+                                    <label for="PA">PA</label>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                
+                    <div class="checkbox-list achados">
+                        <label class="question-text">Espessamento Localização</label>
+                        <div class="indicacao-grid">
+                            <div class="coluna-checkbox">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QSL-espessamento" value="X">
+                                    <label for="QSL-espessamento">QSL</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QIL-espessamento" value="X">
+                                    <label for="QIL-espessamento">QIL</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QSM-espessamento" value="X">
+                                    <label for="QSM-espessamento">QSM</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QIM-espessamento" value="X">
+                                    <label for="QIM-espessamento">QIM</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQlat-espessamento" value="X">
+                                    <label for="UQlat-espessamento">UQlat</label>
+                                </div>
+                            </div>
+
+                            <div class="coluna-checkbox">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQsup-espessamento" value="X">
+                                    <label for="UQsup-espessamento">UQsup</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQmed-espessamento" value="X">
+                                    <label for="UQmed-espessamento">UQmed</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQinf-espessamento" value="X">
+                                    <label for="UQinf-espessamento">UQinf</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="RRA-espessamento" value="X">
+                                    <label for="RRA-espessamento">RRA</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="PA-espessamento" value="X">
+                                    <label for="PA-espessamento">PA</label>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div class="checkbox-list achados">
+                        <label class="question-text">Linfodo palpável</label>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="Axiliar" value="X">
+                            <label for="Axiliar">Axiliar</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="supraclavicular" value="X">
+                            <label for="supraclavicular">Supraclavicular</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Coluna Esquerda -->
+                <div class="anamnese-col divisoria">
+                    <div class="checkbox-list achados">
+                        <label class="question-text">Mama Esquerda</label>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="lesao-papilar-esquerda" value="X">
+                            <label for="lesao-papilar-esquerda">Lesão papilar</label>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-list achados">
+                        <label class="question-text">Descarga papilar</label>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="cristalina-esquerda" value="X">
+                            <label for="cristalina-esquerda">Cristalina</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hemorrágica-esquerda" value="X">
+                            <label for="hemorrágica-esquerda">Hemorrágica</label>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-list achados">
+                        <label class="question-text">Nódulo Localização</label>
+                        <div class="indicacao-grid">
+                            <div class="coluna-checkbox">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QSL-esquerda" value="X">
+                                    <label for="QSL-esquerda">QSL</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QIL-esquerda" value="X">
+                                    <label for="QIL-esquerda">QIL</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QSM-esquerda" value="X">
+                                    <label for="QSM-esquerda">QSM</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QIM-esquerda" value="X">
+                                    <label for="QIM-esquerda">QIM</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQlat-esquerda" value="X">
+                                    <label for="UQlat-esquerda">UQlat</label>
+                                </div>
+                            </div>
+
+                            <div class="coluna-checkbox">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQsup-esquerda" value="X">
+                                    <label for="UQsup-esquerda">UQsup</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQmed-esquerda" value="X">
+                                    <label for="UQmed-esquerda">UQmed</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQinf-esquerda" value="X">
+                                    <label for="UQinf-esquerda">UQinf</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="RRA-esquerda" value="X">
+                                    <label for="RRA-esquerda">RRA</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="PA-esquerda" value="X">
+                                    <label for="PA-esquerda">PA</label>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                
+                    <div class="checkbox-list achados">
+                        <label class="question-text">Espessamento Localização</label>
+                        <div class="indicacao-grid">
+                            <div class="coluna-checkbox">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QSL-espessamento-esquerda" value="X">
+                                    <label for="QSL-espessamento-esquerda">QSL</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QIL-espessamento-esquerda" value="X">
+                                    <label for="QIL-espessamento-esquerda">QIL</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QSM-espessamento-esquerda" value="X">
+                                    <label for="QSM-espessamento-esquerda">QSM</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="QIM-espessamento-esquerda" value="X">
+                                    <label for="QIM-espessamento-esquerda">QIM</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQlat-espessamento-esquerda" value="X">
+                                    <label for="UQlat-espessamento-esquerda">UQlat</label>
+                                </div>
+                            </div>
+
+                            <div class="coluna-checkbox">
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQsup-espessamento-esquerda" value="X">
+                                    <label for="UQsup-espessamento-esquerda">UQsup</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQmed-espessamento-esquerda" value="X">
+                                    <label for="UQmed-espessamento-esquerda">UQmed</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="UQinf-espessamento-esquerda" value="X">
+                                    <label for="UQinf-espessamento-esquerda">UQinf</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="RRA-espessamento-esquerda" value="X">
+                                    <label for="RRA-espessamento-esquerda">RRA</label>
+                                </div>
+                                <div class="checkbox-item">
+                                    <input type="checkbox" id="PA-espessamento-esquerda" value="X">
+                                    <label for="PA-espessamento-esquerda">PA</label>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div class="checkbox-list achados">
+                        <label class="question-text">Linfodo palpável</label>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="Axiliar-esquerda" value="X">
+                            <label for="Axiliar-esquerda">Axiliar</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="supraclavicular-esquerda" value="X">
+                            <label for="supraclavicular-esquerda">Supraclavicular</label>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="anamnese-grid indicacao-clinica">
+                <!-- Controle Radiológico -->
+                <div class="anamnese-col direita">
+                    <div class="checkbox-list achados">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="achados-exame" value="X">
+                            <label for="ambas">5b. Controle radiológico Categoria 3</label>
+                        </div>
+                        <table class="surgery-table">
+                            <thead>
+                                <tr>
+                                    <th>Mama Direita</th>
+                                    <th></th>
+                                    <th>Mama Esquerda</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="nodulo-dir" id="nodulo-dir" class="input-surgery" value="X"></td>
+                                    <td class="surgery-name">nódulo</td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="nodulo-esq" id="nodulo-esq" class="input-surgery" value="X"></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="microcalcificação-dir" id="microcalcificação-dir" class="input-surgery" value="X"></td>
+                                    <td class="surgery-name">microcalcificação</td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="microcalcificação-esq" id="microcalcificação-esq" class="input-surgery" value="X"></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="assimetria-dir" id="assimetria-dir" class="input-surgery" value="X"></td>
+                                    <td class="surgery-name">assimetria focal</td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="assimetria-esq" id="assimetria-esq" class="input-surgery" value="X"></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="difusa-dir" id="difusa-dir" class="input-surgery" value="X"></td>
+                                    <td class="surgery-name">assimetria difusa</td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="difusa-esq" id="difusa-esq" class="input-surgery" value="X"></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="densa-dir" id="densa-dir" class="input-surgery" value="X"></td>
+                                    <td class="surgery-name">área densa</td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="densa-esq" id="densa-esq" class="input-surgery" value="X"></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="distorção-dir" id="distorção-dir" class="input-surgery" value="X"></td>
+                                    <td class="surgery-name">distorção focal</td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="distorção-esq" id="distorção-esq" class="input-surgery" value="X"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Lesão com diagnóstico de câncer -->
+                <div class="anamnese-col">
+                    <div class="checkbox-list achados">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="achados-exame" value="X">
+                            <label for="ambas">5c. Lesão com diagnóstico de câncer</label>
+                        </div>
+                        <table class="surgery-table">
+                            <thead>
+                                <tr>
+                                    <th>Mama Direita</th>
+                                    <th></th>
+                                    <th>Mama Esquerda</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="nodulo-dir-cancer" id="nodulo-dir-cancer" class="input-surgery" value="X"></td>
+                                    <td class="surgery-name">nódulo</td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="nodulo-esq-cancer" id="nodulo-esq-cancer" class="input-surgery" value="X"></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="microcalcificação-dir-cancer" id="microcalcificação-dir-cancer" class="input-surgery" value="X"></td>
+                                    <td class="surgery-name">microcalcificação</td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="microcalcificação-esq-cancer" id="microcalcificação-esq-cancer" class="input-surgery" value="X"></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="assimetria-dir-cancer" id="assimetria-dir-cancer" class="input-surgery" value="X"></td>
+                                    <td class="surgery-name">assimetria focal</td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="assimetria-esq-cancer" id="assimetria-esq-cancer" class="input-surgery" value="X"></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="difusa-dir-cancer" id="difusa-dir-cancer" class="input-surgery" value="X"></td>
+                                    <td class="surgery-name">assimetria difusa</td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="difusa-esq-cancer" id="difusa-esq-cancer" class="input-surgery" value="X"></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="densa-dir-cancer" id="densa-dir-cancer" class="input-surgery" value="X"></td>
+                                    <td class="surgery-name">área densa</td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="densa-esq-cancer" id="densa-esq-cancer" class="input-surgery" value="X"></td>
+                                </tr>
+                                <tr>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="distorção-dir-cancer" id="distorção-dir-cancer" class="input-surgery" value="X"></td>
+                                    <td class="surgery-name">distorção focal</td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="distorção-esq-cancer" id="distorção-esq-cancer" class="input-surgery" value="X"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row ultima">
+                <div class="form-group">
+                    <div class="checkbox-row">
+                        <div class="checkbox-list">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="avaliacao-QT" value="X">
+                                <label for="avaliacao-QT">5d. Avaliação da resposta de QT neo-adjuvante</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="indicacao-mama-direita" value="X">
+                                <label for="mama-direita">6- Mamografia de rastreamento</label>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </div>
         </section>
 
         <section class="form-section salvar">

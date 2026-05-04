@@ -59,7 +59,7 @@ bnt.addEventListener('click', () => {
 
     // Pegar os terceiro trio de numeros
     const cpf = document.getElementById('CPF').value
-    const digitosCPF = cpf.slice(6, 9)
+    const digitosCPF = cpf.slice(4, 7)
 
     // Salvar pdf
     documento.save(nomePaciente + "-" + digitosCPF +'.pdf');
