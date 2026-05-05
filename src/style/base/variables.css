@@ -9,6 +9,10 @@
     display: none;
 }
 
+#background-anamnese-verso {
+    display: none;
+}
+
 input.invalido {
     border: 2px red solid;
 }

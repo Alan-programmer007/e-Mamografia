@@ -21,7 +21,7 @@ CPF.addEventListener("input", (event) => {
 });
 
 // Verifica se o CPF adicionado e valido
-CPF.addEventListener("keydonw", () => {
+CPF.addEventListener("change", () => {
     if (CPF.value.length > 0) {
         const ehValido = validarCPF(CPF.value);
         
@@ -123,12 +123,13 @@ export function corEtinia(documento){
 
 export function pessoaisPrimeiroGrupo(documento){
     const CARTAO = document.getElementById('cartao-sus').value.toUpperCase();
+    const CARTAOSUS = CARTAO.replace(/\s/g, '');
     const NOME = document.getElementById('nome').value.toUpperCase();
     const APELIDO = document.getElementById('apelido').value.toUpperCase();
     const NACIONALIDADE = document.getElementById('nacionalidade').value.toUpperCase();
     const nomeMae = document.getElementById('mae').value.toUpperCase();
 
-    espacoTexto(documento, CARTAO, 12, 54, 5.5)
+    espacoTexto(documento, CARTAOSUS, 12.5, 54, 5.5)
     espacoTexto(documento, NOME, 12.5, 61.5, 5.6)
     espacoTexto(documento, nomeMae,  12.5, 77, 5.6)
     espacoTexto(documento, APELIDO, 6100, 69, 5.)
@@ -137,6 +138,7 @@ export function pessoaisPrimeiroGrupo(documento){
 
 export function pessoaisSegundoGrupo(documento){
     const CPF = document.getElementById("CPF").value;
+    const CPFVALIDADO = CPF.replace(/\D/g, '');
     const idade = document.getElementById("idade").value;
     const data = document.getElementById("nascimento").value
 
@@ -144,7 +146,7 @@ export function pessoaisSegundoGrupo(documento){
     const mes = data.slice(5, 7);
     const dia = data.slice(8, 10)
 
-    espacoTexto(documento, CPF, 12.5, 86, 5.6);
+    espacoTexto(documento, CPFVALIDADO, 12.5, 86, 5.6);
     espacoTexto(documento, idade, 73.5, 94.5, 5.5);
     espacoTexto(documento, dia, 12.5, 94.5, 5.5);
     espacoTexto(documento, mes, 29, 94.5, 5.5);

@@ -605,22 +605,21 @@
             <span class="nav-left">INDICAÇÃO CLÍNICA</span>
         </nav>
 
-        <section class="form-section ">
-
+        <section class="form-section limpar">
             <div class="form-row">
                 <div class="form-group form-group-full">
                     <div class="checkbox-row">
                         <label class="question-text">5- Mamografia diagnóstica</label>
                         <div class="checkbox-list">
                             <div class="checkbox-item">
-                                <input type="checkbox" id="indicacao-mama-direita" value="X">
-                                <label for="mama-direita">Mama Direita</label>
+                                <input type="checkbox" id="indicacao-mama-esquerda" value="X">
+                                <label for="mama-esquerda">Mama Esquerda</label>
                             </div>
                         </div>
                         <div class="checkbox-list">
                             <div class="checkbox-item">
-                                <input type="checkbox" id="indicacao-mama-esquerda" value="X">
-                                <label for="mama-esquerda">Mama Esquerda</label>
+                                <input type="checkbox" id="indicacao-mama-direita" value="X">
+                                <label for="mama-direita">Mama Direita</label>
                             </div>
                         </div>
                         <div class="checkbox-list">
@@ -632,7 +631,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="form-row">
                 <div class="form-group form-group-full">
                     <div class="checkbox-list achados">
@@ -662,8 +660,8 @@
                             <label for="cristalina">Cristalina</label>
                         </div>
                         <div class="checkbox-item">
-                            <input type="checkbox" id="hemorrágica" value="X">
-                            <label for="hemorrágica">Hemorrágica</label>
+                            <input type="checkbox" id="hemorragica" value="X">
+                            <label for="hemorragica">Hemorrágica</label>
                         </div>
                     </div>
                     
@@ -799,8 +797,8 @@
                             <label for="cristalina-esquerda">Cristalina</label>
                         </div>
                         <div class="checkbox-item">
-                            <input type="checkbox" id="hemorrágica-esquerda" value="X">
-                            <label for="hemorrágica-esquerda">Hemorrágica</label>
+                            <input type="checkbox" id="hemorragica-esquerda" value="X">
+                            <label for="hemorragica-esquerda">Hemorrágica</label>
                         </div>
                     </div>
                     
@@ -927,7 +925,7 @@
                 <div class="anamnese-col direita">
                     <div class="checkbox-list achados">
                         <div class="checkbox-item">
-                            <input type="checkbox" id="achados-exame" value="X">
+                            <input type="checkbox" id="achados-exame-radiologico" value="X">
                             <label for="ambas">5b. Controle radiológico Categoria 3</label>
                         </div>
                         <table class="surgery-table">
@@ -945,9 +943,9 @@
                                     <td class="checkbox-item alinhar"><input type="checkbox" name="nodulo-esq" id="nodulo-esq" class="input-surgery" value="X"></td>
                                 </tr>
                                 <tr>
-                                    <td class="checkbox-item alinhar"><input type="checkbox" name="microcalcificação-dir" id="microcalcificação-dir" class="input-surgery" value="X"></td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="microcalcificacao-dir" id="microcalcificacao-dir" class="input-surgery" value="X"></td>
                                     <td class="surgery-name">microcalcificação</td>
-                                    <td class="checkbox-item alinhar"><input type="checkbox" name="microcalcificação-esq" id="microcalcificação-esq" class="input-surgery" value="X"></td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="microcalcificacao-esq" id="microcalcificacao-esq" class="input-surgery" value="X"></td>
                                 </tr>
                                 <tr>
                                     <td class="checkbox-item alinhar"><input type="checkbox" name="assimetria-dir" id="assimetria-dir" class="input-surgery" value="X"></td>
@@ -965,20 +963,20 @@
                                     <td class="checkbox-item alinhar"><input type="checkbox" name="densa-esq" id="densa-esq" class="input-surgery" value="X"></td>
                                 </tr>
                                 <tr>
-                                    <td class="checkbox-item alinhar"><input type="checkbox" name="distorção-dir" id="distorção-dir" class="input-surgery" value="X"></td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="distorcao-dir" id="distorcao-dir" class="input-surgery" value="X"></td>
                                     <td class="surgery-name">distorção focal</td>
-                                    <td class="checkbox-item alinhar"><input type="checkbox" name="distorção-esq" id="distorção-esq" class="input-surgery" value="X"></td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="distorcao-esq" id="distorcao-esq" class="input-surgery" value="X"></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
 
-                <!-- Lesão com diagnóstico de câncer -->
+                <!-- Lesão com diagnóstico de cancer -->
                 <div class="anamnese-col">
                     <div class="checkbox-list achados">
                         <div class="checkbox-item">
-                            <input type="checkbox" id="achados-exame" value="X">
+                            <input type="checkbox" id="achados-exame-cancer" value="X">
                             <label for="ambas">5c. Lesão com diagnóstico de câncer</label>
                         </div>
                         <table class="surgery-table">
@@ -996,9 +994,9 @@
                                     <td class="checkbox-item alinhar"><input type="checkbox" name="nodulo-esq-cancer" id="nodulo-esq-cancer" class="input-surgery" value="X"></td>
                                 </tr>
                                 <tr>
-                                    <td class="checkbox-item alinhar"><input type="checkbox" name="microcalcificação-dir-cancer" id="microcalcificação-dir-cancer" class="input-surgery" value="X"></td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="microcalcificacao-dir-cancer" id="microcalcificacao-dir-cancer" class="input-surgery" value="X"></td>
                                     <td class="surgery-name">microcalcificação</td>
-                                    <td class="checkbox-item alinhar"><input type="checkbox" name="microcalcificação-esq-cancer" id="microcalcificação-esq-cancer" class="input-surgery" value="X"></td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="microcalcificacao-esq-cancer" id="microcalcificacao-esq-cancer" class="input-surgery" value="X"></td>
                                 </tr>
                                 <tr>
                                     <td class="checkbox-item alinhar"><input type="checkbox" name="assimetria-dir-cancer" id="assimetria-dir-cancer" class="input-surgery" value="X"></td>
@@ -1016,9 +1014,9 @@
                                     <td class="checkbox-item alinhar"><input type="checkbox" name="densa-esq-cancer" id="densa-esq-cancer" class="input-surgery" value="X"></td>
                                 </tr>
                                 <tr>
-                                    <td class="checkbox-item alinhar"><input type="checkbox" name="distorção-dir-cancer" id="distorção-dir-cancer" class="input-surgery" value="X"></td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="distorcao-dir-cancer" id="distorcao-dir-cancer" class="input-surgery" value="X"></td>
                                     <td class="surgery-name">distorção focal</td>
-                                    <td class="checkbox-item alinhar"><input type="checkbox" name="distorção-esq-cancer" id="distorção-esq-cancer" class="input-surgery" value="X"></td>
+                                    <td class="checkbox-item alinhar"><input type="checkbox" name="distorcao-esq-cancer" id="distorcao-esq-cancer" class="input-surgery" value="X"></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -1035,12 +1033,28 @@
                                 <label for="avaliacao-QT">5d. Avaliação da resposta de QT neo-adjuvante</label>
                             </div>
                             <div class="checkbox-item">
-                                <input type="checkbox" id="indicacao-mama-direita" value="X">
-                                <label for="mama-direita">6- Mamografia de rastreamento</label>
+                                <input type="checkbox" id="mamografia-rastreamento" value="X">
+                                <label for="mamografia-rastreamento">6- Mamografia de rastreamento</label>
                             </div>
                         </div>
                         </div>
                     </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group form-group-half">
+                    <label for="cartao-sus">Data solicitação</label>
+                    <input type="date" id="solicitcao" name="solicitcao">
+                </div>
+                 <div class="form-group form-group-large">
+                    <label for="Examinador">Examinador</label>
+                    <input type="text" id="Examinador" name="Examinador" maxlength="24">
+                </div>
+            </div>
+            <div class="form-row">
+                 <div class="form-group form-group-large">
+                    <label for="num-exame">Número do exame</label>
+                    <input type="number" id="num-exame" name="num-exame" maxlength="15" inputmode="numeric">
+                </div>
             </div>
         </section>
 
@@ -1049,7 +1063,8 @@
                 <p>Os itens marcados com " <span class="obrigatorio">*</span> " devem ser preenchidos obrigatoriamente</p>
             </div>
             <div class="item">
-                <button class="bnt-salvar" type="submit" disabled>Salvar e Baixar</button>
+                <button class="bnt-salvar" id="bntsalvar-UMA" disabled>1 Página</button>
+                <button class="bnt-salvar" id="bntsalvar-DUAS" disabled>2 Página</button>
                 <button class="bnt-salvar" id="bnt-limpar">Limpar</button>
             </div>
         </section>
@@ -1059,6 +1074,7 @@
         </footer>
 
         <img id="background-anamnese" src="./assets/image/background-anamnese.jpeg"/>
+        <img id="background-anamnese-verso" src="./assets/image/background-mamografia-verso.jpeg"/>
     </main>
     <script src="../node_modules/jspdf/dist/jspdf.umd.min.js"></script>
     <script type="module" src="./scripts/js/main.js"></script>
