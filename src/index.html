@@ -608,28 +608,40 @@
         <section class="form-section limpar">
             <div class="form-row">
                 <div class="form-group form-group-full">
-                    <div class="checkbox-row">
+                    <div class="form-group form-group-full">
                         <label class="question-text">5- Mamografia diagnóstica</label>
-                        <div class="checkbox-list">
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="indicacao-mama-esquerda" value="X">
-                                <label for="mama-esquerda">Mama Esquerda</label>
+                        <div class="checkbox-row checkbox-row-escolaridade">
+                            <div class="custom-radio">
+                                <label for="indicacao-mama-esquerda">
+                                    <input type="radio" id="indicacao-mama-esquerda" name="indicacao-mama" value="X">
+                                    <span class="checkmark"></span>
+                                    Mama Esquerda
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <label for="indicacao-mama-direita">
+                                    <input type="radio" id="indicacao-mama-direita" name="indicacao-mama" value="X">
+                                    <span class="checkmark"></span>
+                                    Mama Direita
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <label for="indicacao-ambas">
+                                    <input type="radio" id="indicacao-ambas" name="indicacao-mama" value="X">
+                                    <span class="checkmark"></span>
+                                    Ambas
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <label for="indicacao-nenhuma">
+                                    <input type="radio" id="indicacao-nenhuma" name="indicacao-mama" value="X">
+                                    <span class="checkmark"></span>
+                                    Nenhuma das anteriores
+                                </label>
                             </div>
                         </div>
-                        <div class="checkbox-list">
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="indicacao-mama-direita" value="X">
-                                <label for="mama-direita">Mama Direita</label>
-                            </div>
-                        </div>
-                        <div class="checkbox-list">
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="indicacao-ambas" value="X">
-                                <label for="ambas">Ambas</label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    </div> 
+                </div>   
             </div>
             <div class="form-row">
                 <div class="form-group form-group-full">

@@ -191,4 +191,5 @@ bntLimpar.addEventListener('click', () => {
     });
         // Desabilita novamente o botao salvar
         bnt.disabled = true;
+        bntDois.disabled = true;
 })
