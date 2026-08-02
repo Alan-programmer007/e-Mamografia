@@ -1,4 +1,4 @@
-import { espacoTexto, configurarCampoNumerico} from "../ferramentas/utils.js";
+import { escreverEmCaixas, escreverEmLinha, configurarCampoNumerico} from "../ferramentas/utils.js";
 
 const numeroExame = document.getElementById("num-exame");
 
@@ -15,9 +15,10 @@ export function dataExaminadorPaginaUm(documento){
 
     const dataModelo = dia + " / " + mes + " / " + ano;
 
-    espacoTexto(documento, EXAMINADOR, 45, 285, 2.5);
-    espacoTexto(documento, dataModelo, 45, 290, 2.5);
-    espacoTexto(documento, EXAME, 45, 295, 2.5);
+    // Area livre do rodape: para antes do "X" de "nao fez cirurgia", em x=119
+    escreverEmLinha(documento, EXAMINADOR, 45, 115, 285);
+    escreverEmLinha(documento, dataModelo, 45, 115, 290);
+    escreverEmLinha(documento, EXAME, 45, 115, 295);
 }
 
 export function dataExaminador(documento){
@@ -29,9 +30,9 @@ export function dataExaminador(documento){
     const mes = dataSolicitacao.slice(5, 7);
     const dia = dataSolicitacao.slice(8, 10);
 
-    espacoTexto(documento, EXAMINADOR, 69.5, 140, 5.5);
-    espacoTexto(documento, dia, 9, 140, 5.5);
-    espacoTexto(documento, mes, 25, 140, 5.5);
-    espacoTexto(documento, ano, 42, 140, 5.5);
-    espacoTexto(documento, EXAME, 34.5, 147.5, 5.5);
+    escreverEmCaixas(documento, EXAMINADOR, 67.6, 200.3, 140, 24);
+    escreverEmCaixas(documento, dia, 6.7, 17.8, 140, 2);
+    escreverEmCaixas(documento, mes, 23.1, 33.9, 140, 2);
+    escreverEmCaixas(documento, ano, 39.5, 61.6, 140, 4);
+    escreverEmCaixas(documento, EXAME, 32.1, 115.1, 147.5, 15);
 }

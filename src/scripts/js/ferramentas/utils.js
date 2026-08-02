@@ -1,14 +1,48 @@
-// Ajusta o espacamento entre as letras
+// Escreve o texto dentro das quadriculas do formulario, uma letra por caixa e
+// centralizada nela. As caixas vao de ini a fim (mm), medidos na imagem de
+// fundo, de modo que o passo sai exato e a letra nao deriva para cima do traco.
+// Se o texto tiver mais letras que caixas, passa a escrever corrido.
+export function escreverEmCaixas(documento, texto, ini, fim, y, celulas) {
+    if (!texto) return;
+
+    // Mais letras que caixas: escreve corrido, com uma folga nas bordas para
+    // o texto nao encostar nos tracos das extremidades.
+    if (texto.length > celulas) {
+        escreverEmLinha(documento, texto, ini + 1, fim - 1, y);
+        return;
+    }
+
+    const passo = (fim - ini) / celulas;
+    for (let i = 0; i < texto.length; i++) {
+        const centro = ini + (i + 0.5) * passo;
+        documento.text(texto[i], centro - documento.getTextWidth(texto[i]) / 2, y);
+    }
+}
+
+// Escreve corrido, com o espacamento natural da fonte, entre ini e fim (mm).
+// Se ainda assim nao couber, aperta o espacamento entre as letras ate caber,
+// em vez de deixar o texto invadir o campo vizinho.
+export function escreverEmLinha(documento, texto, ini, fim, y) {
+    if (!texto) return;
+
+    const largura = fim - ini;
+    const natural = documento.getTextWidth(texto);
+
+    if (natural <= largura || texto.length < 2) {
+        documento.text(texto, ini, y);
+        return;
+    }
+
+    documento.text(texto, ini, y, { charSpace: (largura - natural) / (texto.length - 1) });
+}
+
+// Marcacoes "X" e campos curtos de formato fixo, com passo constante.
 export function espacoTexto(documento, texto, startX, startY, espaco) {
     let x = startX;
 
     for (let i = 0; i < texto.length; i++) {
         documento.text(texto[i], x, startY);
-        if(i >= 17){
-            x += 5.4
-        }else{
-            x += espaco;
-        }
+        x += espaco;
     }
 }
 

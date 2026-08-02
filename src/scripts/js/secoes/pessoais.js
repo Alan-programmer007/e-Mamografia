@@ -1,4 +1,4 @@
-import { espacoTexto, configurarCampoNumerico, filtrarTeclasNumericas, validarCPF, calcularIdade} from "../ferramentas/utils.js";
+import { espacoTexto, escreverEmCaixas, escreverEmLinha, configurarCampoNumerico, filtrarTeclasNumericas, validarCPF, calcularIdade} from "../ferramentas/utils.js";
 
 const CPF = document.getElementById("CPF")
 const CARTAOSUS = document.getElementById('cartao-sus')
@@ -116,7 +116,7 @@ export function corEtinia(documento){
         }else if(etiniaCor === "indigena" ){
             espacoTexto(documento, "X", 160.5, 95, 5.5);
         }else{
-            espacoTexto(documento, etiniaCor, 183.5, 94.5, 2.5);
+            escreverEmLinha(documento, etiniaCor, 183, 204, 94.5);
         }
     }
 }
@@ -129,11 +129,11 @@ export function pessoaisPrimeiroGrupo(documento){
     const NACIONALIDADE = document.getElementById('nacionalidade').value.toUpperCase();
     const nomeMae = document.getElementById('mae').value.toUpperCase();
 
-    espacoTexto(documento, CARTAOSUS, 12.5, 54, 5.5)
-    espacoTexto(documento, NOME, 12.5, 61.5, 5.6)
-    espacoTexto(documento, nomeMae,  12.5, 77, 5.6)
-    espacoTexto(documento, APELIDO, 6100, 69, 5.)
-    espacoTexto(documento, NACIONALIDADE,  97, 86, 3)
+    escreverEmCaixas(documento, CARTAOSUS, 11.2, 92.3, 54, 15)
+    escreverEmCaixas(documento, NOME, 11.4, 204.4, 61.5, 35)
+    escreverEmCaixas(documento, nomeMae, 11.4, 204.4, 77, 35)
+    escreverEmCaixas(documento, APELIDO, 99.3, 204.4, 69, 19)
+    escreverEmLinha(documento, NACIONALIDADE, 96.5, 160.2, 86)
 }
 
 export function pessoaisSegundoGrupo(documento){
@@ -146,9 +146,9 @@ export function pessoaisSegundoGrupo(documento){
     const mes = data.slice(5, 7);
     const dia = data.slice(8, 10)
 
-    espacoTexto(documento, CPFVALIDADO, 12.5, 86, 5.6);
-    espacoTexto(documento, idade, 73.5, 94.5, 5.5);
-    espacoTexto(documento, dia, 12.5, 94.5, 5.5);
-    espacoTexto(documento, mes, 29, 94.5, 5.5);
-    espacoTexto(documento, ano, 45, 94.5, 5.5);
+    escreverEmCaixas(documento, CPFVALIDADO, 11.6, 72.3, 86, 11);
+    escreverEmCaixas(documento, idade, 71.6, 82.8, 94.5, 2);
+    escreverEmCaixas(documento, dia, 10.9, 22.1, 94.5, 2);
+    escreverEmCaixas(documento, mes, 27.4, 38.1, 94.5, 2);
+    escreverEmCaixas(documento, ano, 43.7, 65.8, 94.5, 4);
 }

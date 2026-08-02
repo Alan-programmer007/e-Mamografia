@@ -1,4 +1,4 @@
-import { espacoTexto, configurarCampoNumerico} from "../ferramentas/utils.js";
+import { espacoTexto, escreverEmCaixas, configurarCampoNumerico} from "../ferramentas/utils.js";
 
 const numeroCasa = document.getElementById('numero');
 const codigoMunicipio = document.getElementById('codigo-municipio-res');
@@ -23,10 +23,10 @@ export function residenciaisPrimeiroGrupo(documento){
     const NUMERO_CASA = document.getElementById('numero').value;
     const PONTO_REFERENCIA = document.getElementById('ponto-referencia').value.toLocaleUpperCase();
 
-    espacoTexto(documento, LOGRADOURO, 12, 107, 5.6);
-    espacoTexto(documento, NUMERO_CASA, 12.5, 115.5, 5.5);
-    espacoTexto(documento, COMPLEMENTO, 57, 115.5, 5.5);
-    espacoTexto(documento, PONTO_REFERENCIA, 12, 149.5, 5.6);
+    escreverEmCaixas(documento, LOGRADOURO, 10.9, 204, 107, 35);
+    escreverEmCaixas(documento, NUMERO_CASA, 11.4, 44.4, 115.5, 6);
+    escreverEmCaixas(documento, COMPLEMENTO, 55.3, 204.4, 115.5, 27);
+    escreverEmCaixas(documento, PONTO_REFERENCIA, 10.9, 204, 149.5, 35);
 }
 
 export function residenciaisSegundoGrupo(documento){
@@ -35,10 +35,10 @@ export function residenciaisSegundoGrupo(documento){
     const UF_RESIDENCIA = document.getElementById('uf-residencia').value.toLocaleUpperCase();
     const BAIRRO = document.getElementById('botafogo').value.toLocaleUpperCase();
 
-    espacoTexto(documento, CODIGO_MUNICIPIO, 13, 132, 5.5);
-    espacoTexto(documento, MUNICIPIO_RESIDENCIA, 56, 132, 5.5);
-    espacoTexto(documento, UF_RESIDENCIA, 190, 123.5, 5.5);
-    espacoTexto(documento, BAIRRO, 101, 123.5, 5.6);
+    escreverEmCaixas(documento, CODIGO_MUNICIPIO, 10.9, 49.8, 132, 7);
+    escreverEmCaixas(documento, MUNICIPIO_RESIDENCIA, 54.9, 137.7, 132, 15);
+    escreverEmCaixas(documento, UF_RESIDENCIA, 188.4, 199.5, 123.5, 2);
+    escreverEmCaixas(documento, BAIRRO, 100.7, 183, 123.5, 15);
 }
 
 export function residenciaisTerceiroGrupo(documento){
@@ -48,11 +48,11 @@ export function residenciaisTerceiroGrupo(documento){
     const NUMERO_PARTE_UM = document.getElementById('telefone-parte1').value;
     const NUMERO_PARTE_DOIS = document.getElementById('telefone-parte2').value;
 
-    espacoTexto(documento, CEP_PARTE_UM, 13, 140.5, 5.5);
-    espacoTexto(documento, CEP_PARTE_DOIS, 46, 140.5, 5.5);
-    espacoTexto(documento, DDD, 79, 140.5, 5.5);
-    espacoTexto(documento, NUMERO_PARTE_UM, 101, 140.5, 5.5);
-    espacoTexto(documento, NUMERO_PARTE_DOIS, 128.5, 140.5, 5.5);
+    escreverEmCaixas(documento, CEP_PARTE_UM, 10.9, 38.6, 140.5, 5);
+    escreverEmCaixas(documento, CEP_PARTE_DOIS, 44, 60.7, 140.5, 3);
+    escreverEmCaixas(documento, DDD, 77, 88.4, 140.5, 2);
+    escreverEmCaixas(documento, NUMERO_PARTE_UM, 99.1, 121.4, 140.5, 4);
+    escreverEmCaixas(documento, NUMERO_PARTE_DOIS, 126.7, 148.8, 140.5, 4);
 }
 export function escolaridade(documento){
     const analfabeto = document.getElementById('analfabeto');

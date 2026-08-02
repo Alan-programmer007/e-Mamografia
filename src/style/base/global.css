@@ -52,6 +52,14 @@ body {
     background-color: #f2f2f2;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+/* Exibe o que o usuario digita sempre em maiusculo, igual sai no PDF */
+input[type="text"] {
+    text-transform: uppercase;
+}
+/* Mantem os textos de exemplo na grafia original */
+input[type="text"]::placeholder {
+    text-transform: none;
+}
 .form-group input:focus {
     outline: none;
     border-color: var(--main-color);
